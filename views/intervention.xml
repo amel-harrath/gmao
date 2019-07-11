@@ -1,0 +1,112 @@
+<odoo>
+  <data>
+
+  <!-- Form Views -->
+
+   <record model="ir.ui.view" id="view_gmao_intervention">
+      <field name="name">Intervention</field>
+      <field name="model">intervention</field>
+      <field name="arch" type="xml">
+        <form name="Intervention form">
+          <sheet>
+            <group>
+              <group>
+                <field name="intr_code"/>
+                <field name="description"/>
+                <field name="intr_type"/>
+                <field name="entite"/>
+              </group>
+              <group>
+                <field name="planification"/>
+                <field name="jours_ouvres"/>
+                <field name="indicateur"/>
+              </group>
+            </group>
+            <notebook>
+                <page string="Détails">
+                    <group>
+                        <field name="intr_fille"/>
+                        <field name="descp_fils"/>
+                        <field name="multiplicite"/>
+                        <field name="parent_critique"/>
+                        <field name="code_parent"/>
+                        <field name="desc_parent"/>
+                    </group>
+                </page>  
+                <page string="Activités">
+                    <group>
+                        <field name="descp_fils"/>
+                    </group>
+                </page>
+                <page string="Ressources Req.">
+                    <group>
+                        <field name="descp_fils"/>
+                    </group>
+                </page>
+                <page string="Stock Req.">
+                    <group>
+                        <field name="descp_fils"/>
+                    </group>
+                </page>
+                <page string="Actions">
+                    <group>
+                        <field name="descp_fils"/>
+                    </group>
+                </page>
+                <page string="Familles">
+                    <group>
+                        <field name="descp_fils"/>
+                    </group>
+                </page>
+                <page string="Equipements">
+                    <group>
+                        <field name="descp_fils"/>
+                    </group>
+                </page>
+            </notebook>
+          </sheet>
+        </form>
+        
+        
+
+      </field>
+    </record>
+    
+<!-- Tree views -->
+
+    <record model="ir.ui.view" id="intervention_tree">
+      <field name="name">Intervention</field>
+      <field name="model">intervention</field>
+      <field name="arch" type="xml">
+        <tree string="intervention tree">
+          <field name="intr_code"/>
+          <field name="description"/>
+          <field name="intr_type"/>
+          <field name="entite"/>
+          <field name="planification"/>
+          <field name="jours_ouvres"/>
+          <field name="indicateur"/>
+        </tree>
+      </field>
+    </record>
+
+<!-- Actions -->
+
+    <record model="ir.actions.act_window" id="action_gmao_intervention">
+      <field name="name">Intervention</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">intervention</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+        Create your first intervention
+        </p>
+        <p>
+        details
+        </p>
+      </field>
+    </record>
+
+
+  </data>
+</odoo>

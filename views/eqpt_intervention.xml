@@ -1,0 +1,62 @@
+<odoo>
+    <data>
+
+<!-- Form Views -->
+    
+
+    <record model="ir.ui.view" id="view_gmao_eqpt_intervention">
+      <field name="name">Equipement-Intervention</field>
+      <field name="model">eqpt_intervention</field>
+      <field name="arch" type="xml">
+        <form name="eqptIntervention form">
+          <sheet>
+            <group>
+              <group>
+                <field name="intervention" placeholder="Intervention"/>
+                <field name="eqpt_type"/>
+                <field name="eqpt_class"/>
+              </group>
+              <group>
+                <field name="c_charge"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+<!-- Tree views -->
+ 
+    <record model="ir.ui.view" id="eqpt_intervention_tree">
+      <field name="name">Equipement-Intervention_tree</field>
+      <field name="model">eqpt_intervention</field>
+      <field name="arch" type="xml">
+        <tree string="eqpt_intervention tree">
+          <field name="intervention"/>
+          <field name="eqpt_type"/>
+          <field name="eqpt_class"/>
+          <field name="c_charge"/>
+        </tree>
+      </field>
+    </record>
+    
+<!-- Actions -->
+    
+
+    <record model="ir.actions.act_window" id="action_gmao_eqpt_intervention">
+      <field name="name">Equipement-Intervention</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">eqpt_intervention</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+        Create your first eqpt_intervention
+        </p>
+        <p>
+        details
+        </p>
+      </field>
+    </record>
+
+    </data>
+</odoo>
