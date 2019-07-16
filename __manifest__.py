@@ -28,8 +28,11 @@
         'views/intervention.xml',
         'views/eqpt_intervention.xml',
         'views/zone.xml',
+        'views/details_eqpt.xml',
+        'views/fonction.xml',
+        'views/equipement.xml',
         'views/views.xml',
-        'views/templates.xml',
+        
         
         
     ],

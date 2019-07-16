@@ -1,0 +1,98 @@
+<odoo>
+    <data>
+
+<!-- Form Views -->
+    
+
+    <record model="ir.ui.view" id="view_gmao_eqpt">
+      <field name="name">Détails Topologiet</field>
+      <field name="model">equipement</field>
+      <field name="arch" type="xml">
+        <form name="equipement form">
+          <sheet>
+            <group>
+              <group>
+                <field name="code" />
+                <field name="desc"/>
+                <field name="niv"/>
+                <field name="zone"/>
+                <field name="famille"/>
+                <field name="c_charge"/>
+                <field name="fonc"/>
+                <field name="type_permis"/>
+                <field name="parent_geo"/>
+              </group>
+              <group>
+                <field name="n_eqpt"/>
+                <field name="pt_ot_correctif"/>
+                <field name="entite"/>
+                <field name="cat" widget="radio" options='{"horizontal": 1}'/>
+                <field name="etat_eqpt"/>
+                <field name="eqpt_arret"/>
+              </group>
+            </group>
+            <notebook>
+                <page string="Détails">
+                </page>
+                <page string="Remarques">
+                </page>
+                <page string="Mouvements">
+                </page>
+                <page string="Coût">
+                </page>
+                <page string="N° Série">
+                </page>
+                <page string="Liens">
+                </page>
+                <page string="Technique">
+                </page>
+                <page string="Contrats">
+                </page>
+                <page string="Calendrier">
+                </page>
+                <page string="MàJ. Etat">
+                </page>
+                <page string="Pièces/Outils">
+                </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+<!-- Tree views -->
+ 
+    <record model="ir.ui.view" id="eqpt_tree">
+      <field name="name">Détails_Topologie_tree</field>
+      <field name="model">equipement</field>
+      <field name="arch" type="xml">
+        <tree string="equipement tree">
+           <field name="code" />
+            <field name="desc"/>
+            <field name="zone"/>
+            <field name="famille"/>
+            <field name="fonc"/>
+        </tree>
+      </field>
+    </record>
+    
+<!-- Actions -->
+    
+
+    <record model="ir.actions.act_window" id="action_gmao_eqpt">
+      <field name="name">Détails Topologie</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">equipement</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+        Create your first equipement
+        </p>
+        <p>
+        details
+        </p>
+      </field>
+    </record>
+
+    </data>
+</odoo>

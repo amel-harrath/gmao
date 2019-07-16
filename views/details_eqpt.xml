@@ -1,0 +1,64 @@
+<odoo>
+    <data>
+
+<!-- Form Views -->
+    
+
+    <record model="ir.ui.view" id="view_gmao_details_eqpt">
+      <field name="name">Détails Etat Equipement</field>
+      <field name="model">details_equipement</field>
+      <field name="arch" type="xml">
+        <form name="equipement form">
+          <sheet>
+            <group>
+              <group>
+                <field name="code"/>
+                <field name="description"/>
+                <field name="etat_sys"/>
+                <field name="entite"/>
+              </group>
+              <group>
+                <field name="eqpt_arret"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+<!-- Tree views -->
+ 
+    <record model="ir.ui.view" id="details_eqpt_tree">
+      <field name="name">Détails_Etat_Equipement_tree</field>
+      <field name="model">details_equipement</field>
+      <field name="arch" type="xml">
+        <tree string="equipement tree">
+           <field name="code" />
+            <field name="description"/>
+            <field name="etat_sys"/>
+            <field name="entite"/>
+            <field name="eqpt_arret"/>
+        </tree>
+      </field>
+    </record>
+    
+<!-- Actions -->
+    
+
+    <record model="ir.actions.act_window" id="action_gmao_details_eqpt">
+      <field name="name">Détails Etat Equipement</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">details_equipement</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+        Create your first equipement
+        </p>
+        <p>
+        details
+        </p>
+      </field>
+    </record>
+
+    </data>
+</odoo>

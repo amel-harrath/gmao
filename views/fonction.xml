@@ -4,9 +4,9 @@
 <!-- Form Views -->
     
 
-    <record model="ir.ui.view" id="view_gmao_zone">
-      <field name="name">Zone</field>
-      <field name="model">zone</field>
+    <record model="ir.ui.view" id="view_gmao_fonction">
+      <field name="name">Fonction</field>
+      <field name="model">fonction</field>
       <field name="arch" type="xml">
         <form name="zone form">
           <sheet>
@@ -16,13 +16,6 @@
                 <field name="entite"/>
                 <field name="resp"/>
             </group>
-            <notebook>
-              <page string="Coût">
-              </page>
-              <page string="Calendrier">
-                
-              </page>
-            </notebook>
           </sheet>
         </form>
       </field>
@@ -30,11 +23,11 @@
 
 <!-- Tree views -->
  
-    <record model="ir.ui.view" id="zone_tree">
-      <field name="name">Zone</field>
-      <field name="model">zone</field>
+    <record model="ir.ui.view" id="fonction_tree">
+      <field name="name">Fonction</field>
+      <field name="model">fonction</field>
       <field name="arch" type="xml">
-        <tree string="zone tree">
+        <tree string="fonction tree">
             <field name="code"/>
             <field name="descp"/>
             <field name="entite"/>
@@ -46,14 +39,14 @@
 <!-- Actions -->
     
 
-    <record model="ir.actions.act_window" id="action_gmao_zone">
-      <field name="name">Zone</field>
+    <record model="ir.actions.act_window" id="action_gmao_fonction">
+      <field name="name">Fonction</field>
       <field name="type">ir.actions.act_window</field>
-      <field name="res_model">zone</field>
+      <field name="res_model">fonction</field>
       <field name="view_mode">tree,form</field>
       <field name="help" type="html">
         <p class="oe_view_nocontent_create">
-        Create your first zone
+        Create your first fonction
         </p>
         <p>
         details

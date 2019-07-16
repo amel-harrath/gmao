@@ -31,22 +31,27 @@
               action="action_gmao_zone"
               sequence="1"
               />
-    <menuitem name="Fonction" id="gmao.fonction" 
+   <menuitem name="Fonction" id="gmao.fonction" 
               parent="gmao.fichiers_de_bases"
-              action="action_gmao_intervention"
+              action="action_gmao_fonction"
               sequence="2"
               />
     <menuitem name="Détails Etat Equipements" id="gmao.etat_eqpt" 
               parent="gmao.fichiers_de_bases"
-              action="action_gmao_intervention"
+              action="action_gmao_details_eqpt"
               sequence="3"
               />
 
+    <menuitem name="Détails Topologie" id="gmao.details_topologie" 
+              parent="gmao.fichiers_equipement"
+              action="action_gmao_eqpt"
+              sequence="1"
+              />
     
     <menuitem name="Equipement-Intervention" id="gmao.eqpt_intervention"
               parent="gmao.fichiers_equipement"
               action="action_gmao_eqpt_intervention" 
-              sequence="1"
+              sequence="2"
               />
     
     
