@@ -5,7 +5,7 @@
     
 
     <record model="ir.ui.view" id="view_gmao_eqpt">
-      <field name="name">Détails Topologiet</field>
+      <field name="name">Détails Topographie</field>
       <field name="model">equipement</field>
       <field name="arch" type="xml">
         <form name="equipement form">
@@ -63,7 +63,7 @@
 <!-- Tree views -->
  
     <record model="ir.ui.view" id="eqpt_tree">
-      <field name="name">Détails_Topologie_tree</field>
+      <field name="name">Détails_Topographie_tree</field>
       <field name="model">equipement</field>
       <field name="arch" type="xml">
         <tree string="equipement tree">
@@ -80,7 +80,7 @@
     
 
     <record model="ir.actions.act_window" id="action_gmao_eqpt">
-      <field name="name">Détails Topologie</field>
+      <field name="name">Détails Topographie</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">equipement</field>
       <field name="view_mode">tree,form</field>

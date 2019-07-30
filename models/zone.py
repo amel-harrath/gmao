@@ -7,3 +7,5 @@ class Zone(models.Model):
     descp = fields.Text(string="Description",)
     entite = fields.Char(string="Entité",)
     resp = fields.Char(string="Responsable",)
+    cout = fields.One2many('cout','zone_cout_id','Cout')
+   

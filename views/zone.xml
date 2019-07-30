@@ -18,10 +18,12 @@
             </group>
             <notebook>
               <page string="Coût">
+                <field name="cout" context="{'tree_view_ref': 'view_gmao_cout'}"/>
               </page>
-              <page string="Calendrier">
-                
+
+              <page string='Calendrier'>
               </page>
+            
             </notebook>
           </sheet>
         </form>

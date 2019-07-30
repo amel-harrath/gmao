@@ -16,6 +16,15 @@
                 <field name="entite"/>
                 <field name="resp"/>
             </group>
+            <notebook>
+            
+              <page string="Côut">
+                <field name="cout" context="{'tree_view_ref': 'view_gmao_cout'}"/>
+              </page>
+
+              <page string="Calendrier">
+              </page>
+            </notebook>
           </sheet>
         </form>
       </field>

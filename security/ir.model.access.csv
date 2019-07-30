@@ -1,4 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cout_emp,cout,model_cout,,1,1,1,1
+access_ressource_emp,ressource,model_ressource,,1,1,1,1
 access_eqpt_intervention_emp,eqpt_intervention,model_eqpt_intervention,,1,1,1,1
 access_intervention_emp,intervention,model_intervention,,1,1,1,1
 access_zone_emp,zone,model_zone,,1,1,1,1

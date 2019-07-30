@@ -1,0 +1,236 @@
+<odoo>
+    <data>
+    <!-- Form Views -->
+    <record model="ir.ui.view" id="view_gmao_cout">
+      <field name="name">Cout</field>
+      <field name="model">cout</field>
+      <field name="arch" type="xml">
+      <form name="Cout">
+            <sheet>
+                <group>
+
+                <group>
+                    <field name="periode"/>
+                </group>
+                <group>
+                    <field name="type_cout" widget="radio" options='{"horizontal": 1}'/>
+                </group>
+                    <table>
+                          <tr>
+                            <th></th>
+                            <th>Planifié</th>
+                            <th>Correctif</th> 
+                            <th>Divers</th>
+                            <th>Total</th>
+                            <th>%</th>
+                          </tr>
+                          <tr>
+                            <th>Ressource</th>
+                            <td> <field name="ressource_planifie"/> </td> 
+                            <td> <field name="ressource_correctif"/> </td>
+                            <td> <field name="ressource_divers"/> </td>
+                            <td> <field name="ressource_total"/> </td>
+                            <td> <field name="ressource_percent"/> </td>
+                          </tr>
+                          <tr>
+                            <th>Matériel</th>
+                            <td> <field name="materiel_planifie"/> </td> 
+                            <td> <field name="materiel_correctif"/> </td>
+                            <td> <field name="materiel_divers"/> </td>
+                            <td> <field name="materiel_total"/> </td>
+                            <td> <field name="materiel_percent"/> </td>
+                          </tr>
+                          <tr>
+                            <th>Déplacement</th>
+                            <td> <field name="deplacement_planifie"/> </td> 
+                            <td> <field name="deplacement_correctif"/> </td>
+                            <td> <field name="deplacement_divers"/> </td>
+                            <td> <field name="deplacement_total"/> </td>
+                            <td> <field name="deplacement_percent"/> </td>
+                          </tr>
+                          <tr>
+                            <th>Moyen</th>
+                            <td> <field name="moyen_planifie"/> </td> 
+                            <td> <field name="moyen_correctif"/> </td>
+                            <td> <field name="moyen_divers"/> </td>
+                            <td> <field name="moyen_total"/> </td>
+                            <td> <field name="moyen_percent"/> </td>
+                          </tr>
+                          <tr>
+                            <th>Ajustement</th>
+                            <td> <field name="ajustement_planifie"/> </td> 
+                            <td> <field name="ajustement_correctif"/> </td>
+                            <td> <field name="ajustement_divers"/> </td>
+                            <td> <field name="ajustement_total"/> </td>
+                            <td> <field name="ajustement_percent"/> </td>
+                          </tr>
+                          <tr>
+                            <th>Autre</th>
+                            <td> <field name="autre_planifie"/> </td> 
+                            <td> <field name="autre_correctif"/> </td>
+                            <td> <field name="autre_divers"/> </td>
+                            <td> <field name="autre_total"/> </td>
+                            <td> <field name="autre_percent"/> </td>
+                          </tr>
+                          <tr>
+                            <th>Total</th>
+                            <td> <field name="total_planifie"/> </td> 
+                            <td> <field name="total_correctif"/> </td>
+                            <td> <field name="total_divers"/> </td>
+                            <td> <field name="total_total"/> </td>
+                          </tr>
+                          <tr>
+                            <th>%</th>
+                            <td> <field name="per_planifie"/> </td> 
+                            <td> <field name="per_correctif"/> </td>
+                            <td> <field name="per_divers"/> </td>
+                          </tr>
+                          <tr>
+                            <th>NB OT</th>
+                            <td> <field name="nbot_planifie"/> </td> 
+                            <td> <field name="nbot_correctif"/> </td>
+                            <td> <field name="nbot_divers"/> </td>
+                            <td> <field name="nbot_total"/> </td>
+                          </tr>
+                          <tr>
+                            <th>Temps Arrêt</th>
+                            <td> <field name="tpsarret_planifie"/> </td> 
+                            <td> <field name="tpsarret_correctif"/> </td>
+                            <td> <field name="tpsarret_divers"/> </td>
+                            <td> <field name="tpsarret_total"/> </td>
+                          </tr>
+                          <tr>
+                            <th>Perte Prod.</th>
+                            <td> <field name="perteprod_planifie"/> </td> 
+                            <td> <field name="perteprod_correctif"/> </td>
+                            <td> <field name="perteprod_divers"/> </td>
+                            <td> <field name="perteprod_total"/> </td>
+                          </tr>
+                          <tr>
+                            <th>Dem Inter.</th>
+                            <td> <field name="demint_planifie"/> </td> 
+                            <td> <field name="demint_correctif"/> </td>
+                            <td> <field name="demint_divers"/> </td>
+                          </tr>
+                    </table>
+                  
+
+           <!--     <group string="Ressource">
+                    <field name="ressource_planifie"/>
+                    <field name="ressource_correctif"/>
+                    <field name="ressource_divers"/>
+                    <field name="ressource_total"/>
+                    <field name="ressource_percent"/>
+                </group>
+
+                <group string="Matériel">
+                    <field name="materiel_planifie"/>
+                    <field name="materiel_correctif"/>
+                    <field name="materiel_divers"/>
+                    <field name="materiel_total"/>
+                    <field name="materiel_percent"/>
+                </group>
+
+                <group string="Déplacement">
+                    <field name="deplacement_planifie"/>
+                    <field name="deplacement_correctif"/>
+                    <field name="deplacement_divers"/>
+                    <field name="deplacement_total"/>
+                    <field name="deplacement_percent"/>
+                </group>
+
+                <group string="Moyen">
+                    <field name="moyen_planifie"/>
+                    <field name="moyen_correctif"/>
+                    <field name="moyen_divers"/>
+                    <field name="moyen_total"/>
+                    <field name="moyen_percent"/>
+                </group>
+
+                <group string="Ajustement">
+                    <field name="ajustement_planifie"/>
+                    <field name="ajustement_correctif"/>
+                    <field name="ajustement_divers"/>
+                    <field name="ajustement_total"/>
+                    <field name="ajustement_percent"/>
+                </group>
+
+                <group string="Autre">
+                    <field name="autre_planifie"/>
+                    <field name="autre_correctif"/>
+                    <field name="autre_divers"/>
+                    <field name="autre_total"/>
+                    <field name="autre_percent"/>
+                </group>
+
+                <group string="Total">
+                    <group>
+                    <field name="total_planifie"/>
+                    <field name="total_correctif"/>
+                    <field name="total_divers"/>
+                    <field name="total_total"/>
+                    </group>
+                    <group>
+                    <field name="per_planifie"/>
+                    <field name="per_correctif"/>
+                    <field name="per_divers"/>
+                    </group>
+                </group>
+
+                <group>
+                </group>
+
+                <group string="NB OT">
+                    <field name="nbot_planifie"/>
+                    <field name="nbot_correctif"/>
+                    <field name="nbot_divers"/>
+                    <field name="nbot_total" />
+                </group>
+
+                <group string="Temps Arrêt">
+                    <field name="tpsarret_planifie"/>
+                    <field name="tpsarret_correctif"/>
+                    <field name="tpsarret_divers"/>
+                    <field name="tpsarret_total" />
+                </group>
+
+                <group string="Perte Prod.">
+                    <field name="perteprod_planifie"/>
+                    <field name="perteprod_correctif"/>
+                    <field name="perteprod_divers"/>
+                    <field name="perteprod_total" />
+                </group>
+
+                <group string="Dem. Inter.">
+                    <field name="demint_planifie"/>
+                    <field name="demint_correctif"/>
+                    <field name="demint_divers"/>
+                </group>
+
+-->
+                </group>
+            </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Tree views -->
+ 
+    <record model="ir.ui.view" id="cout_tree">
+      <field name="name">Cout</field>
+      <field name="model">cout</field>
+      <field name="arch" type="xml">
+        <tree string="cout tree">
+            <field name="periode"/>
+			<field name="type_cout"/>
+            <field name="total_total"/>
+            <field name="nbot_total"/>
+            <field name="tpsarret_total"/>
+            <field name="perteprod_total"/>
+        </tree>
+      </field>
+    </record>
+
+    
+    </data>
+</odoo>
