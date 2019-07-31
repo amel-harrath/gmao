@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from . import details_pieces
 from . import zone
 from . import intervention
 from . import eqpt_intervention

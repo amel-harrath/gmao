@@ -33,6 +33,7 @@
         'views/fonction.xml',
         'views/equipement.xml',
         'views/views.xml', 
+        'views/liste_des_pieces.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

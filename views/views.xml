@@ -53,6 +53,15 @@
               action="action_gmao_eqpt_intervention" 
               sequence="2"
               />
+    <menuitem name="Technique" id="gmao.Technique"
+              parent="gmao.fichiers_equipement" 
+              sequence="3"
+              />
+    <menuitem name="Liste des pièces" id="gmao.Liste_des_pieces"
+              parent="gmao.Technique"
+              action="action_gmao_liste_des_pieces"
+              sequence="1"
+              />
     
     
   </data>
