@@ -1,6 +1,6 @@
 from odoo import models, fields
 
-class Pieces(models.Model):
+class Details_Pieces(models.Model):
     _name = 'details_pieces'
 
     code = fields.Many2one('equipement', string="Code",)

@@ -25,20 +25,16 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'views/liste_des_pieces.xml',
         'views/cout.xml',
         'views/intervention.xml',
         'views/eqpt_intervention.xml',
         'views/zone.xml',
         'views/details_eqpt.xml',
         'views/fonction.xml',
-<<<<<<< HEAD
         'views/topographie.xml',
         'views/views.xml',
-=======
-        'views/equipement.xml',
-        'views/views.xml', 
-        'views/liste_des_pieces.xml'
->>>>>>> refs/remotes/origin/master
+       
     ],
     # only loaded in demonstration mode
     'demo': [
