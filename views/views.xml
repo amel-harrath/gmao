@@ -42,7 +42,7 @@
               sequence="3"
               />
 
-    <menuitem name="Détails Topologie" id="gmao.details_topologie" 
+    <menuitem name="Topographie" id="gmao.details_topologie" 
               parent="gmao.fichiers_equipement"
               action="action_gmao_eqpt"
               sequence="1"

@@ -13,6 +13,7 @@ class Cout(models.Model):
     def _calcul_total_ressource(self):
         for cout in self:
             cout.ressource_total = cout.ressource_correctif + cout.ressource_planifie + cout.ressource_divers
+            
     def _calcul_total_materiel(self):
         for cout in self:
             cout.materiel_total = cout.materiel_correctif + cout.materiel_planifie + cout.materiel_divers

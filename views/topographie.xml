@@ -6,15 +6,14 @@
 
     <record model="ir.ui.view" id="view_gmao_eqpt">
       <field name="name">Détails Topographie</field>
-      <field name="model">equipement</field>
+      <field name="model">topographie</field>
       <field name="arch" type="xml">
         <form name="equipement form">
           <sheet>
             <group>
               <group>
-                <field name="code" />
-                <field name="desc"/>
-                <field name="niv"/>
+                <field name="equipement" />
+                <field name="description"/>
                 <field name="zone"/>
                 <field name="famille"/>
                 <field name="c_charge"/>
@@ -27,7 +26,7 @@
                 <field name="pt_ot_correctif"/>
                 <field name="entite"/>
                 <field name="cat" widget="radio" options='{"horizontal": 1}'/>
-                <field name="etat_eqpt"/>
+                <field name="etat_equip"/>
                 <field name="eqpt_arret"/>
               </group>
             </group>
@@ -64,11 +63,11 @@
  
     <record model="ir.ui.view" id="eqpt_tree">
       <field name="name">Détails_Topographie_tree</field>
-      <field name="model">equipement</field>
+      <field name="model">topographie</field>
       <field name="arch" type="xml">
         <tree string="equipement tree">
-           <field name="code" />
-            <field name="desc"/>
+           <field name="equipement" />
+            <field name="description"/>
             <field name="zone"/>
             <field name="famille"/>
             <field name="fonc"/>
@@ -82,7 +81,7 @@
     <record model="ir.actions.act_window" id="action_gmao_eqpt">
       <field name="name">Détails Topographie</field>
       <field name="type">ir.actions.act_window</field>
-      <field name="res_model">equipement</field>
+      <field name="res_model">topographie</field>
       <field name="view_mode">tree,form</field>
       <field name="help" type="html">
         <p class="oe_view_nocontent_create">

@@ -1,4 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_topographie_emp,topographie,model_topographie,,1,1,1,1
 access_cout_emp,cout,model_cout,,1,1,1,1
 access_eqpt_intervention_emp,eqpt_intervention,model_eqpt_intervention,,1,1,1,1
 access_intervention_emp,intervention,model_intervention,,1,1,1,1
