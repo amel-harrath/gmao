@@ -32,10 +32,7 @@
         'views/details_eqpt.xml',
         'views/fonction.xml',
         'views/equipement.xml',
-        'views/views.xml',
-        
-        
-        
+        'views/views.xml', 
     ],
     # only loaded in demonstration mode
     'demo': [
