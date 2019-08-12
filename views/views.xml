@@ -17,8 +17,16 @@
               id="gmao.fichiers_equipement" 
               parent="gmao.menu_root" 
               sequence="2"/>
+
+    <menuitem name="Outils"
+              id="gmao.outils"
+              parent="gmao.menu_root"
+              sequence="3"
+              />
     
     <!-- actions -->
+
+      <!-- fichers de bases -->
 
     <menuitem name="Intervention" id="gmao.intervention" 
               parent="gmao.fichiers_de_bases"
@@ -42,6 +50,9 @@
               sequence="3"
               />
 
+
+      <!-- fichers de equipements -->
+
     <menuitem name="Topographie" id="gmao.details_topologie" 
               parent="gmao.fichiers_equipement"
               action="action_gmao_eqpt"
@@ -62,6 +73,26 @@
               action="action_gmao_liste_des_pieces"
               sequence="1"
               />
+
+
+      <!-- Outils -->
+
+    <menuitem name="Paramétres" id="gmao.parametres"
+              parent="gmao.outils"
+              sequence="1"
+              />
+
+    <menuitem name="Global" id="gmao.global"
+              parent="gmao.parametres"
+              sequence="1"
+              />   
+
+    <menuitem name="Attributs" id="gmao.attributs"
+              parent="gmao.global"
+              action="action_gmao_attribut"
+              sequence="1"
+              /> 
+
     
     
   </data>

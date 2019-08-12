@@ -6,20 +6,21 @@
 
     <record model="ir.ui.view" id="view_gmao_list_des_pieces">
       <field name="name">liste des pieces</field>
-      <field name="model">details_pieces</field>
+      <field name="model">details_equipement</field>
       <field name="arch" type="xml">
         <form name="piece form">
           <sheet>
             <group>
-              <group>
-                <field name="code"/>
-                <field name="article"/>
-                <field name="info"/>
-                <field name="origine"/>
-                <field name="groupe"/>
-                <field name="qte_min"/>
-              </group>
+            
+              
             </group>
+            <notebook>
+              <page string="Pieces">
+                
+                  <field name="code"/>
+                  
+              </page>
+            </notebook>
           </sheet>
         </form>
       </field>
@@ -29,15 +30,11 @@
  
     <record model="ir.ui.view" id="details_piece">
       <field name="name">Détails_piece_tree</field>
-      <field name="model">details_pieces</field>
+      <field name="model">details_equipement</field>
       <field name="arch" type="xml">
         <tree string="equipement tree">
-                <field name="code"/>
-                <field name="article"/>
-                <field name="info"/>
-                <field name="origine"/>
-                <field name="groupe"/>
-                <field name="qte_min"/>
+        <field name="code" />
+                
         </tree>
       </field>
     </record>
@@ -48,7 +45,7 @@
     <record model="ir.actions.act_window" id="action_gmao_liste_des_pieces">
       <field name="name">Détails pieces</field>
       <field name="type">ir.actions.act_window</field>
-      <field name="res_model">details_pieces</field>
+      <field name="res_model">details_equipement</field>
       <field name="view_mode">tree,form</field>
       <field name="help" type="html">
         <p class="oe_view_nocontent_create">

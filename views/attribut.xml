@@ -1,0 +1,81 @@
+<odoo>
+    <data>
+
+<!-- Form Views -->
+    
+
+    <record model="ir.ui.view" id="view_gmao_attribut">
+      <field name="name"> Attribut</field>
+      <field name="model">attribut</field>
+      <field name="arch" type="xml">
+        <form name="attribut form">
+          <sheet>
+            <group>
+              <group>
+               <field name="intit"/>
+                <field name="classe"/>
+                <field name="desc"/>
+                <field name="date"/>
+                <field name="date_version"/>
+                <field name="n_version"/> 
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+<!-- Tree views -->
+ 
+    <record model="ir.ui.view" id="details_attribut">
+      <field name="name">attribut_Tree</field>
+      <field name="model">attribut</field>
+      <field name="arch" type="xml">
+        <tree string="compteur tree">
+           <field name="classe"/>
+            <field name="desc"/>
+            <field name="date"/>
+            <field name="date_version"/>
+            <field name="n_version"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Search View 
+
+    <record id="attribut_search_view" model="ir.ui.view">
+			<field name="name">attribut.search.view</field>
+			<field name="model">attribut</field>
+			<field name="arch" type="xml">
+				<search string="attribut Information">
+					<field name="type_eqpt"/>
+
+					<group expand="0" string="Group By">
+						<filter name="groupby_type_eqpt" string="Type_Equipement" domain="[]" context="{'group_by':'type_eqpt'}"/>
+					</group>
+
+					<filter name="fil_by_type_eqpt" string="Type Equipement" domain="[('type_eqpt','=','0')]"/>
+				</search>
+			</field>
+		</record>    -->
+
+<!-- Actions -->
+    
+
+    <record model="ir.actions.act_window" id="action_gmao_attribut">
+      <field name="name">attributs</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">attribut</field>
+      <field name="view_mode">search,tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+        Create your first attribut
+        </p>
+        <p>
+        details
+        </p>
+      </field>
+    </record>
+
+    </data>
+</odoo>

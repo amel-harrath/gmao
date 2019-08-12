@@ -114,100 +114,6 @@
                           </tr>
                     </table>
                   
-
-           <!--     <group string="Ressource">
-                    <field name="ressource_planifie"/>
-                    <field name="ressource_correctif"/>
-                    <field name="ressource_divers"/>
-                    <field name="ressource_total"/>
-                    <field name="ressource_percent"/>
-                </group>
-
-                <group string="Matériel">
-                    <field name="materiel_planifie"/>
-                    <field name="materiel_correctif"/>
-                    <field name="materiel_divers"/>
-                    <field name="materiel_total"/>
-                    <field name="materiel_percent"/>
-                </group>
-
-                <group string="Déplacement">
-                    <field name="deplacement_planifie"/>
-                    <field name="deplacement_correctif"/>
-                    <field name="deplacement_divers"/>
-                    <field name="deplacement_total"/>
-                    <field name="deplacement_percent"/>
-                </group>
-
-                <group string="Moyen">
-                    <field name="moyen_planifie"/>
-                    <field name="moyen_correctif"/>
-                    <field name="moyen_divers"/>
-                    <field name="moyen_total"/>
-                    <field name="moyen_percent"/>
-                </group>
-
-                <group string="Ajustement">
-                    <field name="ajustement_planifie"/>
-                    <field name="ajustement_correctif"/>
-                    <field name="ajustement_divers"/>
-                    <field name="ajustement_total"/>
-                    <field name="ajustement_percent"/>
-                </group>
-
-                <group string="Autre">
-                    <field name="autre_planifie"/>
-                    <field name="autre_correctif"/>
-                    <field name="autre_divers"/>
-                    <field name="autre_total"/>
-                    <field name="autre_percent"/>
-                </group>
-
-                <group string="Total">
-                    <group>
-                    <field name="total_planifie"/>
-                    <field name="total_correctif"/>
-                    <field name="total_divers"/>
-                    <field name="total_total"/>
-                    </group>
-                    <group>
-                    <field name="per_planifie"/>
-                    <field name="per_correctif"/>
-                    <field name="per_divers"/>
-                    </group>
-                </group>
-
-                <group>
-                </group>
-
-                <group string="NB OT">
-                    <field name="nbot_planifie"/>
-                    <field name="nbot_correctif"/>
-                    <field name="nbot_divers"/>
-                    <field name="nbot_total" />
-                </group>
-
-                <group string="Temps Arrêt">
-                    <field name="tpsarret_planifie"/>
-                    <field name="tpsarret_correctif"/>
-                    <field name="tpsarret_divers"/>
-                    <field name="tpsarret_total" />
-                </group>
-
-                <group string="Perte Prod.">
-                    <field name="perteprod_planifie"/>
-                    <field name="perteprod_correctif"/>
-                    <field name="perteprod_divers"/>
-                    <field name="perteprod_total" />
-                </group>
-
-                <group string="Dem. Inter.">
-                    <field name="demint_planifie"/>
-                    <field name="demint_correctif"/>
-                    <field name="demint_divers"/>
-                </group>
-
--->
                 </group>
             </sheet>
         </form>
@@ -222,7 +128,7 @@
       <field name="arch" type="xml">
         <tree string="cout tree">
             <field name="periode"/>
-			<field name="type_cout"/>
+			      <field name="type_cout"/>
             <field name="total_total"/>
             <field name="nbot_total"/>
             <field name="tpsarret_total"/>
@@ -232,5 +138,27 @@
     </record>
 
     
+
+
+   <!-- Search View -->
+
+    <record id="cout_search_view" model="ir.ui.view">
+			<field name="name">cout.search.view</field>
+			<field name="model">cout</field>
+			<field name="arch" type="xml">
+				<search string="cout Information">
+					<field name="periode"/>
+			    <field name="type_cout"/>
+
+					<group expand="0" string="Group By">
+						<filter name="groupby_periode" string="Période" domain="[]" context="{'group_by':'periode'}"/>
+            <filter name="groupby_type_cout" string="Type Cout" domain="[]" context="{'group_by':'type_cout'}"/>
+					</group>
+
+				</search>
+			</field>
+		</record> 
+
+
     </data>
 </odoo>

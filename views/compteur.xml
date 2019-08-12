@@ -1,0 +1,82 @@
+<odoo>
+    <data>
+
+<!-- Form Views -->
+    
+
+    <record model="ir.ui.view" id="view_gmao_compteur">
+      <field name="name"> Compteur</field>
+      <field name="model">compteur</field>
+      <field name="arch" type="xml">
+        <form name="compteur form">
+          <sheet>
+            <group>
+              <group>
+                <field name="compteur"/>
+                <field name="desc"/>
+                <field name="type_compteur"/>
+                <field name="typee"/>
+                <field name="unite"/>
+                <field name="freq"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+<!-- Tree views -->
+ 
+    <record model="ir.ui.view" id="details_compteur">
+      <field name="name">Compteur_Tree</field>
+      <field name="model">compteur</field>
+      <field name="arch" type="xml">
+        <tree string="compteur tree">
+           <field name="compteur"/>
+            <field name="desc"/>
+            <field name="type_compteur"/>
+            <field name="typee"/>
+            <field name="unite"/>
+            <field name="freq"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Search View 
+
+    <record id="equipement_search_view" model="ir.ui.view">
+			<field name="name">equipement.search.view</field>
+			<field name="model">equipement</field>
+			<field name="arch" type="xml">
+				<search string="Equipement Information">
+					<field name="type_eqpt"/>
+
+					<group expand="0" string="Group By">
+						<filter name="groupby_type_eqpt" string="Type_Equipement" domain="[]" context="{'group_by':'type_eqpt'}"/>
+					</group>
+
+					<filter name="fil_by_type_eqpt" string="Type Equipement" domain="[('type_eqpt','=','0')]"/>
+				</search>
+			</field>
+		</record>    -->
+
+<!-- Actions -->
+    
+
+    <record model="ir.actions.act_window" id="action_gmao_compteur">
+      <field name="name">Compteur</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">compteur</field>
+      <field name="view_mode">search,tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+        Create your first compteur
+        </p>
+        <p>
+        details
+        </p>
+      </field>
+    </record>
+
+    </data>
+</odoo>

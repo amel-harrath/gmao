@@ -5,20 +5,26 @@
     
 
     <record model="ir.ui.view" id="view_gmao_details_eqpt">
-      <field name="name">Détails Etat Equipement</field>
-      <field name="model">details_equipement</field>
+      <field name="name">Détails Equipement</field>
+      <field name="model">equipement</field>
       <field name="arch" type="xml">
         <form name="equipement form">
           <sheet>
             <group>
               <group>
                 <field name="code"/>
-                <field name="description"/>
-                <field name="etat_sys"/>
-                <field name="entite"/>
+                <field name="desc"/>
+                <field name="niv"/>
+                <field name="zone"/>
+                <field name="famille"/>
               </group>
               <group>
-                <field name="eqpt_arret"/>
+                <field name="c_charge"/>
+                <field name="fonc"/>
+                <field name="parent_geo"/>
+                <field name="entite"/>
+                <field name="etat_eqpt"/>
+                <field name="type_eqpt" widget="radio" options='{"horizontal": 1}'/>
               </group>
             </group>
           </sheet>
@@ -29,27 +35,47 @@
 <!-- Tree views -->
  
     <record model="ir.ui.view" id="details_eqpt_tree">
-      <field name="name">Détails_Etat_Equipement_tree</field>
-      <field name="model">details_equipement</field>
+      <field name="name">Détails_Equipement_tree</field>
+      <field name="model">equipement</field>
       <field name="arch" type="xml">
         <tree string="equipement tree">
-           <field name="code" />
-            <field name="description"/>
-            <field name="etat_sys"/>
-            <field name="entite"/>
-            <field name="eqpt_arret"/>
+            <field name="type_eqpt"/>
+            <field name="code" />
+            <field name="desc"/>
+            <field name="zone"/>
+            <field name="fonc"/>
+            <field name="niv"/>
+            <field name="famille"/>
         </tree>
       </field>
     </record>
-    
+
+    <!-- Search View -->
+
+    <record id="equipement_search_view" model="ir.ui.view">
+			<field name="name">equipement.search.view</field>
+			<field name="model">equipement</field>
+			<field name="arch" type="xml">
+				<search string="Equipement Information">
+					<field name="type_eqpt"/>
+
+					<group expand="0" string="Group By">
+						<filter name="groupby_type_eqpt" string="Type_Equipement" domain="[]" context="{'group_by':'type_eqpt'}"/>
+					</group>
+
+					<filter name="fil_by_type_eqpt" string="Type Equipement" domain="[('type_eqpt','=','0')]"/>
+				</search>
+			</field>
+		</record>    
+
 <!-- Actions -->
     
 
     <record model="ir.actions.act_window" id="action_gmao_details_eqpt">
-      <field name="name">Détails Etat Equipement</field>
+      <field name="name">Détails Equipement</field>
       <field name="type">ir.actions.act_window</field>
-      <field name="res_model">details_equipement</field>
-      <field name="view_mode">tree,form</field>
+      <field name="res_model">equipement</field>
+      <field name="view_mode">search,tree,form</field>
       <field name="help" type="html">
         <p class="oe_view_nocontent_create">
         Create your first equipement

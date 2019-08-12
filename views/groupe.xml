@@ -1,0 +1,69 @@
+<odoo>
+    <data>
+
+<!-- Form Views -->
+    
+
+    <record model="ir.ui.view" id="view_gmao_groupe">
+      <field name="name">Groupe</field>
+      <field name="model">groupe</field>
+      <field name="arch" type="xml">
+        <form name="groupe form">
+          <sheet>
+            <group>
+              <group>
+                <field name="code"/>
+                <field name="desc"/>
+                <field name="zone"/>
+                <field name="famille"/>
+              </group>
+              <group>
+                <field name="c_charge"/>
+                <field name="fonc"/>
+                <field name="entite"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+<!-- Tree views -->
+ 
+    <record model="ir.ui.view" id="groupe_tree">
+      <field name="name">groupe_tree</field>
+      <field name="model">groupe</field>
+      <field name="arch" type="xml">
+        <tree string="groupe tree">
+            <field name="code" />
+            <field name="desc"/>
+            <field name="zone"/>
+            <field name="fonc"/>
+            <field name="famille"/>
+            <field name="c_charge"/>
+            <field name="entite"/>
+
+        </tree>
+      </field>
+    </record>
+    
+<!-- Actions -->
+    
+
+    <record model="ir.actions.act_window" id="action_gmao_groupe">
+      <field name="name">groupe</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">groupe</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+        Create your first groupe
+        </p>
+        <p>
+        details
+        </p>
+      </field>
+    </record>
+
+    </data>
+</odoo>

@@ -25,11 +25,16 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'views/zone.xml',
+        'views/attribut.xml',
+        'views/compteur.xml',
+        'views/groupe.xml',
+        'views/reparable.xml',
+        'views/mouvement.xml',
         'views/liste_des_pieces.xml',
         'views/cout.xml',
         'views/intervention.xml',
         'views/eqpt_intervention.xml',
-        'views/zone.xml',
         'views/details_eqpt.xml',
         'views/fonction.xml',
         'views/topographie.xml',

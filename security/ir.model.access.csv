@@ -1,4 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_attribut_emp,attribut,model_attribut,,1,1,1,1
+access_compteur_emp,compteur,model_compteur,,1,1,1,1
+access_group_emp,groupe,model_groupe,,1,1,1,1
+access_reparable_emp,reparable,model_reparable,,1,1,1,1
+access_mouvement_emp,mouvement,model_mouvement,,1,1,1,1
 access_details_pieces_emp,details_pieces,model_details_pieces,,1,1,1,1
 access_topographie_emp,topographie,model_topographie,,1,1,1,1
 access_cout_emp,cout,model_cout,,1,1,1,1

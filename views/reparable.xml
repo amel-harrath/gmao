@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+
+        <!-- Form Views -->
+
+        <record model="ir.ui.view" id="view_gmao_reparable">
+            <field name="name">Reparable</field>
+            <field name="model">reparable</field>
+            <field name="arch" type="xml">
+                <form name="reparable form">
+                    <sheet>
+                        <group>
+                            <field name="num_serie"/>
+                            <field name="article"/>
+                            <field name="date_remplacement"/>
+                            <field name="val_cpt_entrant"/>
+                            <field name="val_cpt_sortant"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree views -->
+ 
+        <record model="ir.ui.view" id="reparable_tree">
+        <field name="name">Reparable_tree</field>
+        <field name="model">reparable</field>
+        <field name="arch" type="xml">
+            <tree string="reparable tree">
+                <field name="num_serie"/>
+                <field name="article"/>
+                <field name="date_remplacement"/>
+                <field name="val_cpt_entrant"/>
+                <field name="val_cpt_sortant"/>
+            </tree>
+        </field>
+        </record>
+    
+        <!-- Actions -->
+    
+
+        <record model="ir.actions.act_window" id="action_gmao_reparable">
+        <field name="name">Reparable</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">reparable</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+            Create your first equipement
+            </p>
+            <p>
+            details
+            </p>
+        </field>
+        </record>
+
+    </data>
+</odoo>

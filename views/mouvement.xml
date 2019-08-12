@@ -1,0 +1,63 @@
+<odoo>
+    <data>
+
+        <!-- Form Views -->
+
+        <record model="ir.ui.view" id="view_gmao_mouvement">
+            <field name="name">Mouvement</field>
+            <field name="model">mouvement</field>
+            <field name="arch" type="xml">
+                <form name="mouvement form">
+                    <sheet>
+                        <group>
+                            <field name="type_mouvement"/>
+                            <field name="date"/>
+                            <field name="niv"/>
+                            <field name="zone"/>
+                            <field name="parent"/>
+                            <field name="fonc"/>
+                            <field name="desc"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree views -->
+ 
+        <record model="ir.ui.view" id="mouvement_tree">
+        <field name="name">Mouvement_tree</field>
+        <field name="model">mouvement</field>
+        <field name="arch" type="xml">
+            <tree string="mouvement tree">
+                <field name="type_mouvement"/>
+                <field name="date"/>
+                <field name="niv"/>
+                <field name="zone"/>
+                <field name="parent"/>
+                <field name="fonc"/>
+                <field name="desc"/>
+            </tree>
+        </field>
+        </record>
+    
+        <!-- Actions -->
+    
+
+        <record model="ir.actions.act_window" id="action_gmao_mouvement">
+        <field name="name">Mouvement</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mouvement</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+            Create your first equipement
+            </p>
+            <p>
+            details
+            </p>
+        </field>
+        </record>
+
+    </data>
+</odoo>

@@ -3,6 +3,7 @@ from odoo import models, fields
 class Equipement(models.Model):
     _name = 'details_equipement'
 
+
     code = fields.Many2one('equipement', string="Code",)
     description = fields.Text(string="Description",)
     etat_sys = fields.Selection(string="Etat Système",
