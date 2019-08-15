@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 from . import pieces_outils
 from . import contrat
 from . import attribut
@@ -14,4 +15,6 @@ from . import equipement
 from . import cout
 from . import topographie
 from . import reparable
+from . import group
+
 

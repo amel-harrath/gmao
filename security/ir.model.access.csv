@@ -1,4 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_group_emp,group,model_group,,1,1,1,1
 access_pieces_outils_emp,pieces_outils,model_pieces_outils,,1,1,1,1
 access_contrat_emp,contrat,model_contrat,,1,1,1,1
 access_attribut_emp,attribut,model_attribut,,1,1,1,1

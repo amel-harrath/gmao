@@ -94,6 +94,7 @@
                   </page>
 
                   <page string="Groupes">
+                    <field name="gps" readonly="1"/>
                   </page>
                 </notebook>
               </page>

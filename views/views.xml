@@ -65,7 +65,11 @@
               sequence="2"
               />
 
-   
+    <menuitem name="Groupe" id="gmao.groupe"
+              parent="gmao.fichiers_equipement"
+              action="action_gmao_group" 
+              sequence="3"
+              />
 
     <menuitem name="Technique" id="gmao.Technique"
               parent="gmao.fichiers_equipement" 
