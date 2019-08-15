@@ -1,0 +1,89 @@
+<odoo>
+    <data>
+
+<!-- Form Views -->
+    
+
+    <record model="ir.ui.view" id="view_gmao_contrat">
+      <field name="name"> contrat</field>
+      <field name="model">contrat</field>
+      <field name="arch" type="xml">
+        <form name="contrat form">
+          <sheet>
+            <group>
+              <group>
+                <field name="code"/>
+                <field name="desc"/>
+                <field name="ss_traitant"/>
+                <field name="etat"/>
+                <field name="type_ct"/>
+                <field name="entite"/>
+                <field name="valeur"/>
+                <field name="date_deb"/>
+                <field name="eqpts" widget="many2many_tags"/>
+
+              </group>
+            </group>
+              
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+<!-- Tree views -->
+ 
+    <record model="ir.ui.view" id="details_contrat">
+      <field name="name">contrat_Tree</field>
+      <field name="model">contrat</field>
+      <field name="arch" type="xml">
+        <tree string="contrat tree">
+            <field name="code"/>
+            <field name="desc"/>
+            <field name="ss_traitant"/>
+            <field name="etat"/>
+            <field name="type_ct"/>
+            <field name="entite"/>
+            <field name="valeur"/>
+            <field name="date_deb"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Search View 
+
+    <record id="contrat_search_view" model="ir.ui.view">
+			<field name="name">contrat.search.view</field>
+			<field name="model">contrat</field>
+			<field name="arch" type="xml">
+				<search string="contrat Information">
+					<field name="type_eqpt"/>
+
+					<group expand="0" string="Group By">
+						<filter name="groupby_type_eqpt" string="Type_Equipement" domain="[]" context="{'group_by':'type_eqpt'}"/>
+					</group>
+
+					<filter name="fil_by_type_eqpt" string="Type Equipement" domain="[('type_eqpt','=','0')]"/>
+				</search>
+			</field>
+		</record>    -->
+
+<!-- Actions -->
+    
+
+    <record model="ir.actions.act_window" id="action_gmao_contrat">
+      <field name="name">contrat</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">contrat</field>
+      <field name="view_mode">search,tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+        Create your first contrat
+        </p>
+        <p>
+        details
+        </p>
+      </field>
+    </record>
+
+    </data>
+</odoo>

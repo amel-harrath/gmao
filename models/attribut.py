@@ -12,3 +12,4 @@ class Attribut(models.Model):
     n_version = fields.Integer(string="N° Version",)
 
     eqpt_attributs_id = fields.Many2one('gmao.topographie', 'Topographie', invisible=True,)
+    gp_attributs_id = fields.Many2one('gmao.groupe', 'Groupe', invisible=True,)

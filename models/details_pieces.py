@@ -7,6 +7,13 @@ class Details_Pieces(models.Model):
 
     article = fields.Char(string="Article",)
     info = fields.Text(string="Info",)
-    origine = fields.Text(string="Origine",)
+    origine = fields.Integer(string="Origine",)
     groupe = fields.Char(string="Groupe",)
-    qte_min = fields.Char(string="Qté Mini",) 
+    qte_min = fields.Integer(string="Qté Mini",) 
+    qte_utilise = fields.Integer(string="Qte Utilisée",)
+    unite = fields.Char(string="Unité",) 
+
+
+    pieces_outils_id = fields.Many2one('pieces_outils', 'Pieces')
+
+

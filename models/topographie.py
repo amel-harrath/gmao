@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, fields, api
 
 class Topographie(models.Model):
     _name = 'topographie'
@@ -265,14 +265,17 @@ class Topographie(models.Model):
             pays_list.append((i, i))
         return pays_list
 
+    
 
+    
     equipement = fields.Many2one('equipement', string="Equipement", required=True)
+    prefixe = fields.Selection(selection=[('bat1','BAT1'),('prod1','PROD1'),('s1','S1'),('s2','S2'),('siv','SIV'),])
     description = fields.Text(string="Description", related='equipement.desc',)
     zone = fields.Many2one('zone',string="Zone", related='equipement.zone')
     type_permis = fields.Char(string="Type Permis",)
     parent_geo = fields.Char(string="Parent Géograph.",related="equipement.parent_geo",)
     etat_equip = fields.Selection(string="Etat Equipement", related="equipement.etat_eqpt",)
-    niveau = fields.Integer(string="Niveau", max="100", min="0",related="equipement.niv",)
+    niveau = fields.Integer(string="Niveau", min="1",related="equipement.niv", default="1")
     famille = fields.Char(string="Famille",related="equipement.famille",)
     c_charge = fields.Char(string="C Charge",related="equipement.c_charge",)
     fonc = fields.Many2one('fonction', string="Fonction",related="equipement.fonc",)
@@ -359,14 +362,16 @@ class Topographie(models.Model):
     cout = fields.One2many('cout','equipement_cout_id','Cout')
     reparable = fields.One2many('reparable','eqpt_reparable_id','Reparable')
     attributs = fields.One2many('attribut','eqpt_attributs_id','Attribut')
+    pieces_outils = fields.One2many('pieces_outils', 'equipement_id', 'Pieces_Outils')
+
+    piece = fields.One2many('details_pieces',string='topo',related="pieces_outils.piece")
 
 
-
-    alimente = fields.Many2many('equipement', 'alimente_eqpt', 'equipement_id', 'topo_id', string="Alimente",)
-    alimente_par = fields.Many2many('equipement', 'alimente_par_eqpt', 'equipement_id', 'topo_id', string="Alimenté Par",)
-    groupe = fields.Many2many('groupe', 'groupe_eqpt', 'equipement_id', 'groupe_id', string="Groupe",)
-    structure_tech = fields.Many2many('equipement', 'structure_tech', 'equipement_id', 'topo_id', string="Structure Technique",)
-    equivalents = fields.Many2many('equipement', 'equivalant', 'equipement_id', 'topo_id', string="Equivalant",)
-    compteur = fields.Many2many('compteur', 'compteur_eqpt', 'compteur_id', 'topo_id', string="Compteur",)
-
-
+    alimente = fields.Many2many('equipement', 'alimente_eqpt', 'topo_id', 'eqpt_alimente_id', string="Alimente",)
+    alimente_par = fields.Many2many('equipement', 'alimente_par_eqpt', 'topo_id', 'eqpt_alim_par_id', string="Alimenté Par",)
+    #groupe = fields.Many2many('groupe', 'groupe_eqpt', 'topo_id', 'groupe_id', string="Groupe", readonly=True,)
+    structure_tech = fields.Many2many('equipement', 'structure_tech', 'topo_id', 'eqpt_struct_id', string="Structure Technique",)
+    equivalents = fields.Many2many('equipement', 'equivalant', 'topo_id', 'equivt_id', string="Equivalant", domain="[('fonc','=','topographie.fonc')]",)
+    compteur = fields.Many2many('compteur', 'compteur_eqpt', 'topo_id', 'cmpt_id', string="Compteur",)
+    contrats = fields.Many2many('contrat','contrats_equipements', 'equipement_id', 'contrat_id', domain="[('type_ct', '=','0'),('type_ct','=','1')]", string='Contrats', readonly=True,)
+    

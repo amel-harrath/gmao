@@ -10,13 +10,13 @@
     <menuitem name="Fichiers De Bases" 
               id="gmao.fichiers_de_bases" 
               parent="gmao.menu_root" 
-              sequence="1"
+              sequence="2"
               />
 
     <menuitem name="Fichiers Equipements" 
               id="gmao.fichiers_equipement" 
               parent="gmao.menu_root" 
-              sequence="2"/>
+              sequence="1"/>
 
     <menuitem name="Outils"
               id="gmao.outils"
@@ -51,7 +51,7 @@
               />
 
 
-      <!-- fichers de equipements -->
+      <!-- fichers des equipements -->
 
     <menuitem name="Topographie" id="gmao.details_topologie" 
               parent="gmao.fichiers_equipement"
@@ -64,13 +64,16 @@
               action="action_gmao_eqpt_intervention" 
               sequence="2"
               />
+
+   
+
     <menuitem name="Technique" id="gmao.Technique"
               parent="gmao.fichiers_equipement" 
               sequence="3"
               />
     <menuitem name="Liste des pièces" id="gmao.Liste_des_pieces"
               parent="gmao.Technique"
-              action="action_gmao_liste_des_pieces"
+              action="action_gmao_pieces_outils"
               sequence="1"
               />
 
@@ -92,6 +95,12 @@
               action="action_gmao_attribut"
               sequence="1"
               /> 
+    
+    <menuitem name="Contrat" id="gmao.contrat"
+              parent="gmao.global"
+              action="action_gmao_contrat"
+              sequence="2"
+              />
 
     
     

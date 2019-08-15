@@ -1,8 +1,8 @@
 <odoo>
-    <data>
+  <data>
 
-<!-- Form Views -->
-    
+    <!-- Form Views -->
+
 
     <record model="ir.ui.view" id="view_gmao_eqpt">
       <field name="name">Topographie</field>
@@ -13,6 +13,7 @@
             <group>
               <group>
                 <field name="equipement" />
+                <field name="prefixe"/>
                 <field name="description"/>
                 <field name="zone"/>
                 <field name="famille"/>
@@ -31,83 +32,82 @@
               </group>
             </group>
             <notebook>
-                <page string="Détails">
+              <page string="Détails">
+                <group>
                   <group>
-                      <group>
-                        <field name="modele"/>
-                        <field name="code_barres"/>
-                        <field name="utilisateur"/>
-                        <field name="resp"/>
-                        <field name="emp"/>
-                        <field name="tel"/>
-                        <field name="type_containeur"/>
-                        <field name="modele_eqpt"/>
-                      </group>
-                      
-                      <group>
-                        <field name="typ"/>
-                        <field name="article"/>
-                        <field name="cmpt_article"/>
-                        <field name="sys"/>
-                        <field name="priorite"/>
-                        <field name="index"/>
-                        <field name="hist"/>
-                      </group>
+                    <field name="modele"/>
+                    <field name="code_barres"/>
+                    <field name="utilisateur"/>
+                    <field name="resp"/>
+                    <field name="emp"/>
+                    <field name="tel"/>
+                    <field name="type_containeur"/>
+                    <field name="modele_eqpt"/>
                   </group>
-                </page>
 
-                <page string="Remarques">
-                  <field name="remarque"/>
-                </page>
+                  <group>
+                    <field name="typ"/>
+                    <field name="article"/>
+                    <field name="cmpt_article"/>
+                    <field name="sys"/>
+                    <field name="priorite"/>
+                    <field name="index"/>
+                    <field name="hist"/>
+                  </group>
+                </group>
+              </page>
 
-                <page string="Mouvements">
-                  <field name="mouvement" context="{'tree_view_ref': 'view_gmao_mouvement'}"/>
-                </page>
+              <page string="Remarques">
+                <field name="remarque"/>
+              </page>
 
-                <page string="Coût">
-                  <field name="cout" context="{'search_view_ref': 'cout_search_view'}"/>
-                </page>
+              <page string="Mouvements">
+                <field name="mouvement" context="{'tree_view_ref': 'view_gmao_mouvement'}"/>
+              </page>
 
-                <page string="N° Série">
-                  <field name="reparable" context="{'tree_view_ref': 'view_gmao_reparable'}"/>
-                </page>
+              <page string="Coût">
+                <field name="cout" context="{'search_view_ref': 'cout_search_view'}"/>
+              </page>
 
-                <page string="Liens">
-                  <notebook>
-                    <page string="Alimente">
-                      <field name="alimente"/>
-                    </page>
+              <page string="N° Série">
+                <field name="reparable" context="{'tree_view_ref': 'view_gmao_reparable'}"/>
+              </page>
 
-                    <page string="Alimenté Par">
-                      <field name="alimente_par"/>
-                    </page>
+              <page string="Liens">
+                <notebook>
+                  <page string="Alimente">
+                    <field name="alimente"/>
+                  </page>
 
-                    <page string="Structure Tech.">
-                      <field name="structure_tech" domain="[('type_eqpt','=','0')]" />
-                    </page>
+                  <page string="Alimenté Par">
+                    <field name="alimente_par"/>
+                  </page>
 
-                    <page string="Modèle d'equipements">
-                    </page>
+                  <page string="Structure Tech.">
+                    <field name="structure_tech" domain="[('type_eqpt','=','0')]" />
+                  </page>
 
-                    <page string="Options Duplications">
-                    </page>
+                  <page string="Modèle d'equipements">
+                  </page>
 
-                    <page string="Groupes">
-                      <field name="groupe"/>
-                    </page>
-                  </notebook>
-                </page>
+                  <page string="Options Duplications">
+                  </page>
 
-                <page string="Technique">
-                  <notebook>
-                    <page string="Equivalent">
-                      <field name="equivalents" domain="[('fonc','=','topographie.fonc')]"/>
-                    </page>
-                    <page string="Compteur">
-                     <field name="compteur"/>
-                    </page>
-                    <page string="Spécifications">
-                     <group>
+                  <page string="Groupes">
+                  </page>
+                </notebook>
+              </page>
+
+              <page string="Technique">
+                <notebook>
+                  <page string="Equivalent">
+                    <field name="equivalents" />
+                  </page>
+                  <page string="Compteur">
+                    <field name="compteur"/>
+                  </page>
+                  <page string="Spécifications">
+                    <group>
                       <group>
                         <field name="n_modele"/>
                         <field name="constructeur"/>
@@ -127,124 +127,144 @@
                         <field name="pays"/>
                       </group>
                       <group>
-                        <table  width="250">
+                        <table width="250">
                           <tr>
                             <th></th>
                             <th>Mois</th>
-                            <th>Année</th> 
+                            <th>Année</th>
                             <th>Compteur</th>
                           </tr>
                           <tr>
                             <th>Durée de vie min</th>
-                            <td width="5%"> <field name="duree_vie_min_mm"/> </td> 
-                            <td width="5%"> <field name="duree_vie_min_aa"/> </td>
-                            <td width="5%"> <field name="compteur_duree_min"/> </td>
+                            <td width="5%">
+                              <field name="duree_vie_min_mm"/>
+                            </td>
+                            <td width="5%">
+                              <field name="duree_vie_min_aa"/>
+                            </td>
+                            <td width="5%">
+                              <field name="compteur_duree_min"/>
+                            </td>
                           </tr>
                           <tr>
                             <th>Durée de vie max</th>
-                            <td width="5%"> <field name="duree_vie_max_mm"/> </td> 
-                            <td width="5%"> <field name="duree_vie_max_aa"/> </td>
-                            <td width="5%"> <field name="compteur_duree_max"/> </td>
+                            <td width="5%">
+                              <field name="duree_vie_max_mm"/>
+                            </td>
+                            <td width="5%">
+                              <field name="duree_vie_max_aa"/>
+                            </td>
+                            <td width="5%">
+                              <field name="compteur_duree_max"/>
+                            </td>
                           </tr>
                         </table>
                       </group>
-                      
+
                     </group>
-                    </page>
-                    <page string="Attributs">
-                      <field name="attributs"/>
-                    </page>
-                    <page string="Taille Conteneur">
+                  </page>
+                  <page string="Attributs">
+                    <field name="attributs"/>
+                  </page>
+                  <page string="Taille Conteneur">
                     <group>
 
-                          <group>
-                            <field name="haut_ext"/>
-                            <field name="largeur_ext"/>
-                            <field name="long_ext"/>
-                            <field name="long_porte"/>
-                            <field name="poids_a_vide"/>
-                            <field name="surface"/>
-                            <field name="facteur_k_francais"/>
-                            <field name="poids_brut"/>
-                          </group>
+                      <group>
+                        <field name="haut_ext"/>
+                        <field name="largeur_ext"/>
+                        <field name="long_ext"/>
+                        <field name="long_porte"/>
+                        <field name="poids_a_vide"/>
+                        <field name="surface"/>
+                        <field name="facteur_k_francais"/>
+                        <field name="poids_brut"/>
+                      </group>
 
-                          <group>
-                          <field name="haut_int"/>
-                          <field name="largeur_int"/>
-                          <field name="long_int"/>
-                          <field name="larg_porte"/>
-                          <field name="charge_maxi"/>
-                          <field name="volume"/>
-                          <field name="facteur_f_allemand"/>
-                          <field name="size16"/>
-                          </group>
+                      <group>
+                        <field name="haut_int"/>
+                        <field name="largeur_int"/>
+                        <field name="long_int"/>
+                        <field name="larg_porte"/>
+                        <field name="charge_maxi"/>
+                        <field name="volume"/>
+                        <field name="facteur_f_allemand"/>
+                        <field name="size16"/>
+                      </group>
 
-                        </group>
-                    </page>
-                    <page string="Etalonnage">
-                        <group>
+                    </group>
+                  </page>
+                  <page string="Etalonnage">
+                    <group>
 
-                          <group>
-                            <field name="per_nominale"/>
-                            <field name="tps_fonct"/>
-                            <field name="tps_fonct_avan"/>
-                            <field name="nb_util_avant_etalonn"/>
-                            <field name="nb_util_apres_etalonn"/>
-                            <field name="act_radio_all"/>
-                            <field name="act_radio_ind_fr"/>
-                            <field name="dern_pv_etalonn"/>
-                          </group>
+                      <group>
+                        <field name="per_nominale"/>
+                        <field name="tps_fonct"/>
+                        <field name="tps_fonct_avan"/>
+                        <field name="nb_util_avant_etalonn"/>
+                        <field name="nb_util_apres_etalonn"/>
+                        <field name="act_radio_all"/>
+                        <field name="act_radio_ind_fr"/>
+                        <field name="dern_pv_etalonn"/>
+                      </group>
 
-                          <group>
-                          <field name="per_max"/>
-                          <field name="unite_tps_fonct"/>
-                          <field name="date_fin_validite"/>
-                          <field name="nb_util"/>
-                          <field name="nb_util_periodique"/>
-                          <field name="act_radio_fr"/>
-                          <field name="act_radio_ind_all"/>
-                          <field name="contamine"/>
-                          </group>
+                      <group>
+                        <field name="per_max"/>
+                        <field name="unite_tps_fonct"/>
+                        <field name="date_fin_validite"/>
+                        <field name="nb_util"/>
+                        <field name="nb_util_periodique"/>
+                        <field name="act_radio_fr"/>
+                        <field name="act_radio_ind_all"/>
+                        <field name="contamine"/>
+                      </group>
 
-                        </group>
-                      
-                    </page>
-                  </notebook>
-                </page>
+                    </group>
+
+                  </page>
+                </notebook>
+              </page>
 
 
-                <page string="Contrats">
-                </page>
-                <page string="Calendrier">
-                </page>
-                <page string="MàJ. Etat">
-                </page>
-                <page string="Pièces/Outils">
-                </page>
+              <page string="Contrats">
+                <field name="contrats"/>
+              </page>
+
+              <page string="Calendrier">
+              </page>
+
+              <page string="MàJ. Etat">
+              </page>
+
+              <page string="Pièces/Outils">
+
+                <field name="piece" readonly="1"/>
+                  
+              </page>
+
             </notebook>
           </sheet>
         </form>
       </field>
     </record>
 
-<!-- Tree views -->
- 
+    <!-- Tree views -->
+
     <record model="ir.ui.view" id="eqpt_tree">
       <field name="name">Détails_Topographie_tree</field>
       <field name="model">topographie</field>
       <field name="arch" type="xml">
         <tree string="equipement tree">
-           <field name="equipement" />
-            <field name="description"/>
-            <field name="zone"/>
-            <field name="famille"/>
-            <field name="fonc"/>
+          <field name="equipement" />
+          <field name="description"/>
+          <field name="zone"/>
+          <field name="famille"/>
+          <field name="fonc"/>
         </tree>
       </field>
     </record>
-    
-<!-- Actions -->
-    
+
+    <!-- Actions -->
+
 
     <record model="ir.actions.act_window" id="action_gmao_eqpt">
       <field name="name">Topographie</field>
@@ -261,5 +281,5 @@
       </field>
     </record>
 
-    </data>
+  </data>
 </odoo>

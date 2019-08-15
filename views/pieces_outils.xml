@@ -1,0 +1,64 @@
+<odoo>
+    <data>
+
+        <!-- Form Views -->
+
+
+        <record model="ir.ui.view" id="view_gmao_pieces_outils">
+            <field name="name">liste des pieces_outils</field>
+            <field name="model">pieces_outils</field>
+            <field name="arch" type="xml">
+                <form name="pieces_outils form">
+                    <sheet>
+                        <group>
+
+                            <field name="equipement_id"/>
+                            <field name="desc"/>
+
+
+                        </group>
+                        <notebook>
+                            <page string='Pieces'>
+                                <field name="piece" readonly="0"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree views -->
+
+        <record model="ir.ui.view" id="pieces_outils">
+            <field name="name">pieces_outils_tree</field>
+            <field name="model">pieces_outils</field>
+            <field name="arch" type="xml">
+                <tree string="pieces_outils tree">
+                    <field name="equipement_id"/>
+                    <field name="desc"/>
+                    <field name="piece"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <!-- Actions -->
+
+
+        <record model="ir.actions.act_window" id="action_gmao_pieces_outils">
+            <field name="name">Détails pieces</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pieces_outils</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+        Create your piece
+                </p>
+                <p>
+        details
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>
