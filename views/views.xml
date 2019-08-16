@@ -85,8 +85,11 @@
               action="action_gmao_manuels_dessins"
               sequence="2"
               />
-
-
+    <menuitem name="Consignes" id="gmao.consignes"
+              parent="gmao.Technique"
+              action="action_gmao_consignes"
+              sequence="3"
+              />
       <!-- Outils -->
 
     <menuitem name="Paramétres" id="gmao.parametres"

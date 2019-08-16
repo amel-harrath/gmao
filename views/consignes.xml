@@ -1,0 +1,68 @@
+<odoo>
+    <data>
+
+        <!-- Form Views -->
+
+
+        <record model="ir.ui.view" id="view_gmao_consignes">
+            <field name="name"> consignes</field>
+            <field name="model">consignes</field>
+            <field name="arch" type="xml">
+                <form name="consignes form">
+                    <sheet>
+                        <group>
+
+                            <field name="topo_id"/>
+                            <field name="desc"/>
+
+
+                        </group>
+                        <notebook>
+                            <page string='A Faire'>
+                                <field name="afaire"/>
+                            </page>
+
+                            <page string='A ne pas Faire'>
+                                <field name="anepasfaire"/>
+                            </page>
+
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree views -->
+
+        <record model="ir.ui.view" id="consignes">
+            <field name="name">consignes_tree</field>
+            <field name="model">consignes</field>
+            <field name="arch" type="xml">
+                <tree string="consignes tree">
+                    <field name="topo_id"/>
+                    <field name="desc"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <!-- Actions -->
+
+
+        <record model="ir.actions.act_window" id="action_gmao_consignes">
+            <field name="name">Consignes</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">consignes</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+        Create your consignes
+                </p>
+                <p>
+        details
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

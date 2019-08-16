@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 
+from . import details_consignes
+from . import consignes
 from . import details_dessins
 from . import manuels_dessins
 from . import pieces_outils

@@ -1,4 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_consignes_emp,consignes,model_consignes,,1,1,1,1
+access_details_consignes_emp,details_consignes,model_details_consignes,,1,1,1,1
 access_manuels_dessins,manuels_dessins,model_manuels_dessins,,1,1,1,1
 access_details_dessins_emp,details_dessins,model_details_dessins,,1,1,1,1
 access_group_emp,group,model_group,,1,1,1,1
