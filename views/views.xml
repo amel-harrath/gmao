@@ -65,7 +65,7 @@
               sequence="2"
               />
 
-    <menuitem name="Groupe" id="gmao.groupe"
+    <menuitem name="Groupes" id="gmao.groupe"
               parent="gmao.fichiers_equipement"
               action="action_gmao_group" 
               sequence="3"
@@ -79,6 +79,11 @@
               parent="gmao.Technique"
               action="action_gmao_pieces_outils"
               sequence="1"
+              />
+    <menuitem name="Manuels et Dessins" id="gmao.manuels_dessins"
+              parent="gmao.Technique"
+              action="action_gmao_manuels_dessins"
+              sequence="2"
               />
 
 
@@ -100,7 +105,7 @@
               sequence="1"
               /> 
     
-    <menuitem name="Contrat" id="gmao.contrat"
+    <menuitem name="Contrats" id="gmao.contrat"
               parent="gmao.global"
               action="action_gmao_contrat"
               sequence="2"

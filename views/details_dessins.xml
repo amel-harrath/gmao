@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+
+        <!-- Form Views -->
+
+
+        <record model="ir.ui.view" id="view_gmao_details_dessins">
+            <field name="name">details_dessins</field>
+            <field name="model">details_dessins</field>
+            <field name="arch" type="xml">
+                <form name="details_dessins form">
+                    <sheet>
+                        <group>
+                            <field name="num"/>
+                            <field name="date_creation"/>
+                            <field name="version"/>
+                            <field name="empl"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree views -->
+
+        <record model="ir.ui.view" id="details_dessins">
+            <field name="name">details_dessins_tree</field>
+            <field name="model">details_dessins</field>
+            <field name="arch" type="xml">
+                <tree string="details_dessins tree">
+                    <field name="num"/>
+                    <field name="date_creation"/>
+                    <field name="version"/>
+                    <field name="empl"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <!-- Actions -->
+
+
+        <record model="ir.actions.act_window" id="action_gmao_details_dessins">
+            <field name="name"> Détails Dessins</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">details_dessins</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+        Create your details_dessins
+                </p>
+                <p>
+        details
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>
