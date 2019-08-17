@@ -7,7 +7,7 @@ class Employe(models.Model):
     mat = fields.Integer(string="Matricule", required=True,)
     ressource = fields.Char(string="Ressource",)
     superv = fields.Char(string="Superviseur",)
-    entite = fields.Char(string="Entite",)
+    entite = fields.Many2one('entite', string="Entite",)
 
     code_barres = fields.Char(string="Code Barres",)
     c_charge = fields.Char(string="C. Charge",)

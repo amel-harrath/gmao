@@ -280,7 +280,7 @@ class Topographie(models.Model):
     c_charge = fields.Char(string="C Charge",related="equipement.c_charge",)
     fonc = fields.Many2one('fonction', string="Fonction",related="equipement.fonc",)
     pt_ot_correctif = fields.Boolean(string="PT pour OT Correctf",)
-    entite = fields.Char(string="Entité",related="equipement.entite",)
+    entite = fields.Many2one('entite', string="Entité",)
     n_eqpt = fields.Integer(string="N° Equipement",)
     eqpt_arret = fields.Boolean(string="Equipement Arrêt",)
     cat = fields.Selection(string=" ", related="equipement.type_eqpt",)

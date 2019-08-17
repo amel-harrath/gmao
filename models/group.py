@@ -9,7 +9,7 @@ class Group(models.Model):
     famille = fields.Char(string="Famille")
     c_charge = fields.Char(string="C Charge",)
     fonc = fields.Many2one('fonction', string="Fonction",)
-    entite = fields.Char(string="Entité")
+    entite = fields.Many2one('entite', string="Entité")
     type_permis = fields.Char(string="Type Permis",)
     pt_ot_correctif = fields.Boolean(string="PT pour OT Correctf",)
     eqpt_arret = fields.Boolean(string="Equipement Arrêt",)

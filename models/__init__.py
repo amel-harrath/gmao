@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+
+from . import entite
 from . import employe
 from . import details_contrats
 from . import defauts

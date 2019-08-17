@@ -13,7 +13,7 @@ class Equipement(models.Model):
     c_charge = fields.Char(string="C Charge",)
     fonc = fields.Many2one('fonction', string="Fonction",)
     parent_geo = fields.Char(string="Parent Géograph.",)
-    entite = fields.Char(string="Entité",)
+    entite = fields.Many2one('entite', string="Entité",)
     etat_eqpt = fields.Selection(string="Etat Système",
      selection=[('0','0.Normal'),
      ('1','1.Dégradé'),

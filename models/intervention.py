@@ -7,7 +7,7 @@ class Intervention(models.Model):
 	intr_code = fields.Integer(string='Intervention',)
 	description = fields.Text(string='Description')
 	intr_type = fields.Char(string='Type',)
-	entite = fields.Char(string='Entité',)
+	entite = fields.Many2one('entite', string='Entité',)
 	planification= fields.Selection(selection=[('0','0.Juste à temps'),
 	('1','1.Date de début'),
 	('2','2.Date de fin'),

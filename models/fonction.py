@@ -5,6 +5,6 @@ class Fonction(models.Model):
 
     code = fields.Char(string="Code",)
     descp = fields.Text(string="Description",)
-    entite = fields.Char(string="Entité",)
+    entite = fields.Many2one('entite', string="Entité",)
     resp = fields.Char(string="Responsable",)
     cout = fields.One2many('cout','fonction_cout_id','Cout')

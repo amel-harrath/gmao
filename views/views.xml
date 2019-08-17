@@ -133,12 +133,18 @@
               /> 
 
       <!-- Ressources -->
+
     <menuitem name="Employés" id="gmao.employes"
               parent="gmao.ressources"
               action="action_gmao_employe"
               sequence="1"
               />
 
+    <menuitem name="Entité" id="gmao.entite"
+              parent="gmao.ressources"
+              action="action_gmao_entite"
+              sequence="2"
+              />
     
     
   </data>
