@@ -1,0 +1,109 @@
+<odoo>
+    <data>
+
+        <!-- Form Views -->
+
+
+        <record model="ir.ui.view" id="view_gmao_employe">
+            <field name="name"> employe</field>
+            <field name="model">employe</field>
+            <field name="arch" type="xml">
+                <form name="employe form">
+                    <sheet>
+                        <group>
+                            <field name="mat"/>
+                            <field name="ressource"/>
+                            <field name="superv"/>
+                            <field name="entite"/>
+                        </group>
+
+                        <notebook>
+                            <page string="Détails">
+                                <group>
+                                    <group>
+                                        <field name="code_barres"/>
+                                        <field name="c_charge"/>
+                                        <field name="n_eq"/>
+                                        <field name="hrs_payees_jrs"/>
+                                        <field name="hrs_eff_jrs"/>
+                                        <field name="date_ref"/>
+                                        <field name="taille_model"/>
+                                        <field name="type_cout" widget="radio" options='{"horizontal": 1}'/>
+                                    </group>
+
+                                    <group>
+                                        <field name="date_entree"/>
+                                        <field name="fin_contrat"/>
+                                        <field name="n_sec_soc"/>
+                                        <field name="contact_urgence"/>
+                                        <field name="tel"/>
+                                        <field name="fax"/>
+                                        <field name="email"/>
+                                        <field name="texte1"/>
+                                        <field name="permanent"/>
+
+                                    </group>
+                                </group>
+                            </page>
+
+                            <page string="Identité">
+                            </page>
+
+                            <page string="Equipes">
+                            </page>
+
+                            <page string="Qualif.">
+                            </page>
+
+                            <page string="Préféré">
+                            </page>
+
+                            <page string="Plus">
+                            </page>
+
+                            <page string="Alloué Sur.">
+                            </page>
+
+                            <page string="Calendrier">
+                            </page>
+
+                        </notebook>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree views -->
+
+        <record model="ir.ui.view" id="employe">
+            <field name="name">employe_Tree</field>
+            <field name="model">employe</field>
+            <field name="arch" type="xml">
+                <tree string="employe tree">
+                    <field name="mat"/>
+                    <field name="ressource"/>
+                    <field name="superv"/>
+                    <field name="entite"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="action_gmao_employe">
+            <field name="name">Employés</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">employe</field>
+            <field name="view_mode">search,tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+        Create your first employe
+                </p>
+                <p>
+        details
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

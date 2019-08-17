@@ -23,6 +23,12 @@
               parent="gmao.menu_root"
               sequence="3"
               />
+
+    <menuitem name="Ressources"
+              id="gmao.ressources"
+              parent="gmao.menu_root"
+              sequence="4"
+              />
     
     <!-- actions -->
 
@@ -125,7 +131,13 @@
               action="action_gmao_attribut"
               sequence="1"
               /> 
-  
+
+      <!-- Ressources -->
+    <menuitem name="Employés" id="gmao.employes"
+              parent="gmao.ressources"
+              action="action_gmao_employe"
+              sequence="1"
+              />
 
     
     

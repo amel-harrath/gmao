@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-
+from . import employe
 from . import details_contrats
 from . import defauts
 from . import details_consignes
