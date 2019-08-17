@@ -1,7 +1,7 @@
 from odoo import models, fields
 
-class Group(models.Model):
-    _name = 'group'
+class Groupes(models.Model):
+    _name = 'groupes'
 
     code = fields.Char(string="Equipement")
     desc = fields.Text(string="Description",)
@@ -30,4 +30,5 @@ class Group(models.Model):
     eqpts = fields.Many2many('topographie', 'group_eqpt', 'group_id', 'topo_id', string="Equipements" )
     attributs = fields.One2many('attribut','gp_attributs_id','Attribut')
     cout = fields.One2many('cout','gp_cout_id','Cout')
-    contrats = fields.Many2many('contrat','contrats_gp', 'groupe_id', 'contrat_id', string='Contrats',)
+    contrats = fields.Many2many('details_contrats','details_contrats_gp', 'groupe_id', 'contrat_id', string='Contrats',)
+    

@@ -12,6 +12,7 @@
                     <sheet>
                         <group>
                             <field name="mat"/>
+                            <field name="nom"/>
                             <field name="ressource"/>
                             <field name="superv"/>
                             <field name="entite"/>
@@ -53,6 +54,7 @@
                             </page>
 
                             <page string="Qualif.">
+                                <field name="qualif_ids"/>
                             </page>
 
                             <page string="Préféré">

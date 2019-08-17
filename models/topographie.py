@@ -369,7 +369,7 @@ class Topographie(models.Model):
     contrats = fields.One2many('details_contrats',string="Contrats", related="contrat_rel.details_contrat", readonly=True, domain="[('type_ct', '=','0'),('type_ct','=','1')]",)
 
 
-    gps = fields.One2many('group','eqpts', string="Groupes" )
+    gps = fields.One2many('groupes','eqpts', string="Groupes" )
     alimente = fields.Many2many('equipement', 'alimente_eqpt', 'topo_id', 'eqpt_alimente_id', string="Alimente",)
     alimente_par = fields.Many2many('equipement', 'alimente_par_eqpt', 'topo_id', 'eqpt_alim_par_id', string="Alimenté Par",)
     structure_tech = fields.Many2many('equipement', 'structure_tech', 'topo_id', 'eqpt_struct_id', string="Structure Technique",)

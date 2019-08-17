@@ -1,0 +1,223 @@
+<odoo>
+    <data>
+
+        <!-- Sequences -->
+
+        <record id="increment_num_ot_sequence" model="ir.sequence">
+            <field name="name">Num OT Incrementation</field>
+            <field name="code">increment_num_ot</field>
+            <field name="prefix"></field>
+            <field name="padding">6</field>
+            <field name="number_next_actual">1</field>
+            <field name="implementation">no_gap</field>
+            <field name="num_ot" eval="False"/>
+        </record>
+
+        <record id="increment_num_ot_prefixe" model="ir.sequence">
+            <field name="name">Num OT Incrementation</field>
+            <field name="code">increment_num_ot_prefixe</field>
+            <field name="prefix">%(year)s</field>
+            <field name="padding">6</field>
+            <field name="implementation">no_gap</field>
+            <field name="num_ot" eval="False"/>
+        </record>
+
+        <!-- Form Views -->
+
+
+        <record model="ir.ui.view" id="view_gmao_details_ot">
+            <field name="name">Détails OT</field>
+            <field name="model">details_ot</field>
+            <field name="arch" type="xml">
+                <form name="Détails OT form">
+                    <sheet>
+                        <group>
+
+                            <group>
+                                <field name="num_ot"/>
+                                <field name="equipement"/>
+                                <field name="desc_eqpt"/>
+                                <field name="intervention"/>
+                                <field name="desc_inter"/>
+                                <field name="type_intr"/>
+                                <field name="classe"/>
+                                <field name="priorite"/>
+                            </group>
+
+                            <group>
+                                <field name="etat_ot"/>
+                                <field name="date_prevue"/>
+                                <field name="cat_ot" widget='radio' options='{"horizontal":"1"}'/>
+                                <field name="superviseur"/>
+                                <field name="c_charge"/>
+                                <field name="etat_eqpt"/>
+                                <field name="criticite"/>
+                            </group>
+
+                        </group>
+
+                        <notebook>
+                            <page string="Détails">
+                                <notebook>
+
+                                    <page string="Détails">
+                                        <group>
+                                            <group>
+                                                <field name="fin_prevue"/>
+                                                <field name="date_deb"/>
+                                                <field name="date_fin"/>
+                                                <field name="unite_cumulees"/>
+                                                <field name="hrs_realisees"/>
+                                                <field name="hrs_planifiees"/>
+                                            </group>
+                                            <group>
+                                                <field name="ot_pere"/>
+                                                <field name="n_plan"/>
+                                                <field name="n_di"/>
+                                                <field name="signe_par"/>
+                                                <field name="date_rapport"/>
+                                                <field name="date_declaration"/>
+                                                <field name="tel_rapport"/>
+                                                <field name="eqpt_ss_ctr"/>
+                                                <field name="allo_empl"/>
+                                                <field name="verif_qualifs"/>
+                                            </group>
+                                            <group>
+                                                <field name="cout_ress_ext"/>
+                                                <field name="cout_ress_int"/>
+                                                <field name="ressources"/>
+                                                <field name="pieces"/>
+                                                <field name="autres"/>
+                                                <field name="moyens"/>
+                                                <field name="frais_dep"/>
+                                                <field name="ajustement"/>
+                                                <field name="cout_total"/>
+                                                <field name="reparable"/>
+                                            </group>
+                                        </group>
+                                    </page>
+
+                                    <page string="Plus">
+                                        <group>
+                                            <group>
+                                                <field name="permis_travail"/>
+                                                <field name="cpt"/>
+                                                <field name="desc_cpt"/>
+                                                <field name="valeur_cpt"/>
+                                                <field name="maj_direct_releve"/>
+                                                <field name="tps_arret"/>
+                                                <field name="perte_prod"/>
+                                                <field name="type_ot"/>
+                                                <field name="replan_auto"/>
+                                                <field name="redond"/>
+                                                <field name="anc_occ" widget='radio' options='{"horizontal":"1"}'/>
+                                            </group>
+
+                                            <group>
+                                                <group>
+                                                    <field name="contrat"/>
+                                                    <field name="type_cout"/>
+                                                    <field name="rep_eqpt"/>
+                                                    <field name="nouv_rep"/>
+                                                    <field name="projet"/>
+                                                    <field name="zone"/>
+                                                    <field name="devis"/>
+                                                    <field name="demande_par"/>
+                                                    <field name="realise_par"/>
+                                                </group>
+                                                <group>
+                                                    <field name="sec_verif"/>
+                                                    <field name="n_serie"/>
+                                                    <field name="nouv_n_serie"/>
+                                                    <field name="tel_eqpt"/>
+                                                    <field name="fonction"/>
+                                                </group>
+                                            </group>
+                                        </group>
+                                    </page>
+
+                                </notebook>
+                            </page>
+
+                            <page string="Description">
+                            </page>
+
+                            <page string="Commentaires">
+                            </page>
+
+                            <page string="M.O.">
+                            </page>
+
+                            <page string="Matériel">
+                            </page>
+
+                            <page string="Défauts">
+                            </page>
+
+                            <page string="Actions">
+                            </page>
+
+                            <page string="SuM">
+                            </page>
+
+                            <page string="Compteurs">
+                            </page>
+
+                            <page string="Consignes">
+                                <notebook>
+                                    <page string="A Faire">
+                                        <field name="afaire"/>
+                                    </page>
+
+                                    <page string="A ne pas Faire">
+                                        <field name="anepasfaire"/>
+                                    </page>
+                                </notebook>
+                            </page>
+
+                        </notebook>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree views -->
+
+        <record model="ir.ui.view" id="details_ot">
+            <field name="name">details_ot_Tree</field>
+            <field name="model">details_ot</field>
+            <field name="arch" type="xml">
+                <tree string="details_ot tree">
+                    <field name="num_ot"/>
+                    <field name="equipement"/>
+                    <field name="intervention"/>
+                    <field name="type_intr"/>
+                    <field name="classe"/>
+                    <field name="priorite"/>
+                    <field name="date_prevue"/>
+
+                </tree>
+            </field>
+        </record>
+
+
+        <!-- Action -->
+
+        <record model="ir.actions.act_window" id="action_gmao_details_ot">
+            <field name="name">Détails OT</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">details_ot</field>
+            <field name="view_mode">search,tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+        Create your first details_ot
+                </p>
+                <p>
+        details
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

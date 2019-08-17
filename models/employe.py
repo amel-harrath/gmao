@@ -5,6 +5,7 @@ class Employe(models.Model):
 
 
     mat = fields.Integer(string="Matricule", required=True,)
+    nom = fields.Char(string="",)
     ressource = fields.Char(string="Ressource",)
     superv = fields.Char(string="Superviseur",)
     entite = fields.Many2one('entite', string="Entite",)
@@ -26,3 +27,5 @@ class Employe(models.Model):
     email = fields.Char(string="Email",)
     texte1 = fields.Text(string="Texte 1",)
     permanent = fields.Boolean(string="Permanent",)
+
+    qualif_ids = fields.Many2many('qualification','qualif_empl_rel','qualif_id','empl_id', string="Qualifications",)

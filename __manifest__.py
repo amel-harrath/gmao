@@ -25,6 +25,8 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'views/details_ot.xml',
+        'views/qualification.xml',
         'views/entite.xml',
         'views/employe.xml',
         'views/details_contrats.xml',
@@ -33,7 +35,7 @@
         'views/details_consignes.xml',
         'views/manuels_dessins.xml',
         'views/details_dessins.xml',
-        'views/group.xml',
+        'views/groupes.xml',
         'views/pieces_outils.xml',
         'views/contrat.xml',
         'views/zone.xml',

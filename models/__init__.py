@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
-
+from . import permis_travail
+from . import groupes
+from . import qualification
 from . import entite
 from . import employe
 from . import details_contrats
@@ -23,7 +25,8 @@ from . import equipement
 from . import cout
 from . import topographie
 from . import reparable
-from . import group
+from . import details_ot
+
 
 
 

@@ -4,11 +4,11 @@
         <!-- Form Views -->
 
 
-        <record model="ir.ui.view" id="view_gmao_group">
-            <field name="name">liste des group</field>
-            <field name="model">group</field>
+        <record model="ir.ui.view" id="view_gmao_groupes">
+            <field name="name">liste des groupes</field>
+            <field name="model">groupes</field>
             <field name="arch" type="xml">
-                <form name="group form">
+                <form name="groupes form">
                     <sheet>
                         <group>
                             <group>
@@ -79,11 +79,11 @@
 
         <!-- Tree views -->
 
-        <record model="ir.ui.view" id="group">
-            <field name="name">group_tree</field>
-            <field name="model">group</field>
+        <record model="ir.ui.view" id="groupes">
+            <field name="name">groupes_tree</field>
+            <field name="model">groupes</field>
             <field name="arch" type="xml">
-                <tree string="group tree">
+                <tree string="groupes tree">
                     <field name="code" />
                     <field name="desc"/>
                     <field name="zone"/>
@@ -100,13 +100,13 @@
 
 
         <record model="ir.actions.act_window" id="action_gmao_group">
-            <field name="name">Groupe</field>
+            <field name="name">Groupes</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">group</field>
+            <field name="res_model">groupes</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
-        Create your piece
+        Create your groupes
                 </p>
                 <p>
         details

@@ -29,6 +29,12 @@
               parent="gmao.menu_root"
               sequence="4"
               />
+
+    <menuitem name="Travaux en Cours"
+              id="gmao.travaux_en_cours"
+              parent="gmao.menu_root"
+              sequence="5"
+              />
     
     <!-- actions -->
 
@@ -146,6 +152,13 @@
               sequence="2"
               />
     
+      <!-- Travaux en cours -->
+
+    <menuitem name="Détails OT" id="gmao.details_ot"
+              parent="gmao.travaux_en_cours"
+              action="action_gmao_details_ot"
+              sequence="1"
+              />
     
   </data>
 </odoo>
