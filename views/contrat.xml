@@ -1,8 +1,8 @@
 <odoo>
-    <data>
+  <data>
 
-<!-- Form Views -->
-    
+    <!-- Form Views -->
+
 
     <record model="ir.ui.view" id="view_gmao_contrat">
       <field name="name"> contrat</field>
@@ -11,40 +11,30 @@
         <form name="contrat form">
           <sheet>
             <group>
-              <group>
-                <field name="code"/>
-                <field name="desc"/>
-                <field name="ss_traitant"/>
-                <field name="etat"/>
-                <field name="type_ct"/>
-                <field name="entite"/>
-                <field name="valeur"/>
-                <field name="date_deb"/>
-                <field name="eqpts" widget="many2many_tags"/>
-
-              </group>
+              <field name="equipement_id"/>
+              <field name="desc"/>
             </group>
-              
+
+            <notebook>
+              <page string="Contrats">
+                <field name="details_contrat"/>
+              </page>
+            </notebook>
+
           </sheet>
         </form>
       </field>
     </record>
 
-<!-- Tree views -->
- 
+    <!-- Tree views -->
+
     <record model="ir.ui.view" id="details_contrat">
       <field name="name">contrat_Tree</field>
       <field name="model">contrat</field>
       <field name="arch" type="xml">
         <tree string="contrat tree">
-            <field name="code"/>
-            <field name="desc"/>
-            <field name="ss_traitant"/>
-            <field name="etat"/>
-            <field name="type_ct"/>
-            <field name="entite"/>
-            <field name="valeur"/>
-            <field name="date_deb"/>
+          <field name="equipement_id"/>
+          <field name="desc"/>
         </tree>
       </field>
     </record>
@@ -67,10 +57,10 @@
 			</field>
 		</record>    -->
 
-<!-- Actions -->
-    
+    <!-- Actions -->
 
-    <record model="ir.actions.act_window" id="action_gmao_contrat">
+
+    <record model="ir.actions.act_window" id="action_gmao_contrats">
       <field name="name">contrat</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">contrat</field>
@@ -85,5 +75,5 @@
       </field>
     </record>
 
-    </data>
+  </data>
 </odoo>

@@ -227,7 +227,7 @@
 
 
               <page string="Contrats">
-                <field name="contrats"/>
+                <field name="contrats" domain="[('type_ct', '=','0')|('type_ct','=','1')]"/>
               </page>
 
               <page string="Calendrier">

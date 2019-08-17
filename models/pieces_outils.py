@@ -9,4 +9,3 @@ class Pieces_Outils(models.Model):
     desc = fields.Text(string="Description", related='equipement_id.description',)
 
     piece = fields.One2many('details_pieces','pieces_outils_id', 'pieces')
-

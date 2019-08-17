@@ -96,6 +96,18 @@
               action="action_gmao_defauts"
               sequence="4"
               />
+
+    <menuitem name="Financier" id="gmao.financier"
+              parent="gmao.fichiers_equipement" 
+              sequence="4"
+              />
+    
+    <menuitem name="Contrats" id="gmao.contrats"
+              parent="gmao.financier"
+              action="action_gmao_contrats"
+              sequence="1"
+              />
+
       <!-- Outils -->
 
     <menuitem name="Paramétres" id="gmao.parametres"
@@ -113,12 +125,7 @@
               action="action_gmao_attribut"
               sequence="1"
               /> 
-    
-    <menuitem name="Contrats" id="gmao.contrat"
-              parent="gmao.global"
-              action="action_gmao_contrat"
-              sequence="2"
-              />
+  
 
     
     

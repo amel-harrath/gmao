@@ -3,13 +3,9 @@ from odoo import models, fields
 class Contrat(models.Model):
     _name = 'contrat'
 
-    code = fields.Char(string="Contrat",)
-    desc = fields.Text(string="Description",)
-    ss_traitant = fields.Char(string="Sous-Traitant",)
-    etat = fields.Selection(selection=[('0','0.Ouvert'),('1','1.Annuel'),], string="Etat",)
-    type_ct = fields.Selection(selection=[('0','0.Commande Ouverte'),('1','1.Annuel'),('2','2.Autres'),], string="Type",)
-    entite = fields.Char(string="Entite",)
-    valeur = fields.Float(string="Valeur",)
-    date_deb = fields.Date(string="Date Déb.",)
+    code = fields.Char()
 
-    eqpts = fields.Many2many('topographie', 'contrats_equipements', 'contrat_id', 'equipement_id', string="Equipement",)
+    equipement_id = fields.Many2one('topographie', 'Equipement', required=True,)
+    desc = fields.Text(string="Description", related='equipement_id.description',)
+
+    details_contrat = fields.One2many('details_contrats','contrat_eqpts_id', 'pieces')
