@@ -90,6 +90,12 @@
               action="action_gmao_consignes"
               sequence="3"
               />
+
+    <menuitem name="Défauts" id="gmao.defauts"
+              parent="gmao.Technique"
+              action="action_gmao_defauts"
+              sequence="4"
+              />
       <!-- Outils -->
 
     <menuitem name="Paramétres" id="gmao.parametres"

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
+from . import defauts
 from . import details_consignes
 from . import consignes
 from . import details_dessins
