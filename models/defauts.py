@@ -15,7 +15,8 @@ class Defauts(models.Model):
     cause = fields.Char(string='Cause',)
     remede = fields.Char(string='Remède',)
     duree = fields.Integer(string='Durée',)
-    num_ot = fields.Integer(string='N° OT',)
+    ot_id = fields.Many2one('details_ot',)
+    num_ot = fields.Integer(string='N° OT', related="ot_id.num_ot")
     valeur_cpt = fields.Integer(string='Valeur Compteur',)
     cout_ot = fields.Float(string='Coût OT',)
    

@@ -31,6 +31,7 @@
                                     </group>
                                     <group>
                                         <field name="duree"/>
+                                        <field name="ot_id"/>
                                         <field name="num_ot"/>
                                     </group>
                                     <group>

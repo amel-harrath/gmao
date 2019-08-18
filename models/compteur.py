@@ -9,4 +9,8 @@ class Compteur(models.Model):
     typee = fields.Char(string="Type",)
     unite = fields.Char(string="Unité",)
     freq = fields.Integer(string="Fréquence",)
+    date_releve = fields.Date(string="Date Relevé",)
+    val_max_jr = fields.Integer(string="Valeur Max journalière",)
+    valeur = fields.Integer(string="Valeur",)
 
+    ot_id = fields.Many2one('details_ot', invisible=True,)

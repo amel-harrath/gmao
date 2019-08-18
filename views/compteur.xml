@@ -18,6 +18,9 @@
                 <field name="typee"/>
                 <field name="unite"/>
                 <field name="freq"/>
+                <field name="date_releve"/>
+                <field name="valeur"/>
+                <field name="val_max_jr"/>
               </group>
             </group>
           </sheet>
