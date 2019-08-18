@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from . import commentaires_ot
 from . import permis_travail
 from . import groupes
 from . import qualification
@@ -26,6 +27,9 @@ from . import cout
 from . import topographie
 from . import reparable
 from . import details_ot
+from . import allocation_employeot
+from . import ressources
+from . import allocation_ressourcesot
 
 
 

@@ -4,12 +4,6 @@ class Details_OT(models.Model):
     _name = 'details_ot'
 
 
-    _sql_constraints = [
-                     ('num_ot_unique', 
-                      'unique(num_ot)',
-                      'Le numero OT est déjà utilisé!')
-]
-
     def _get_cout_total(self):
         for cout in self:
             cout.cout_total = cout.cout_ress_ext + cout.cout_ress_int + cout.ressources + cout.pieces + cout.autres + cout.moyens + cout.frais_dep + cout.ajustement
@@ -73,8 +67,8 @@ class Details_OT(models.Model):
     replan_auto = fields.Boolean(string="Replanif. Auto",)
     redond = fields.Boolean(string="Redondance",)
     anc_occ = fields.Selection(selection=[('0','Effacer'),('1','Déplacer'),], string="Anc. Occurrences",)
-    #contrat = fields.Many2one('détails_contrats', string="Contrat",)
-    #type_contrat = fields.Selection(string="Type Contrat", related="contrat.type_ct",)
+    contrat = fields.Many2one('details_contrats', string="Contrat",)
+    type_contrat = fields.Selection(string="Type Contrat", related="contrat.type_ct",)
     type_cout = fields.Selection(selection=[('interne','Interne'),('externe','Externe'),('total','Total'),], string="Type Coût",)
     rep_eqpt = fields.Char(string="Rép. Eqpt",)
     nouv_rep = fields.Char(string="Nouv. Rep",)
@@ -93,3 +87,6 @@ class Details_OT(models.Model):
 
     afaire = fields.Many2many('details_consignes','consignes_afaire_details_ot','details_ot_id','consignes_id', 'A Faire',)
     anepasfaire = fields.Many2many('details_consignes','consignes_anepasfaire_details_ot','details_ot_id','consignes_id', 'A ne pas Faire',)
+    allocation_employes_ids = fields.One2many('allocation_employeot', 'details_ot_ids', 'Allocation Employés')
+    allocation_ressources_ids = fields.One2many('allocation_ressourcesot', 'details_ot_ids','Allocation Ressources')
+    commentaires_ids = fields.One2many('commentaires_ot', 'details_ot_ids','Commentaires')

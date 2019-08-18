@@ -115,6 +115,8 @@
 
                                             <group>
                                                 <group>
+                                                    <field name="contrat"/>
+                                                    <field name="type_contrat"/>
                                                     <field name="type_cout"/>
                                                     <field name="rep_eqpt"/>
                                                     <field name="nouv_rep"/>
@@ -142,9 +144,81 @@
                             </page>
 
                             <page string="Commentaires">
+                                <field name="commentaires_ids">
+                                    <form>
+                                        <sheet>
+                                            <field name="date"/>
+                                            <field name="desc"/>
+                                        </sheet>
+                                    </form>
+                                    <tree editable="top">
+                                        <field name="date"/>
+                                        <field name="desc"/>
+                                    </tree>
+                                </field>
                             </page>
 
                             <page string="M.O.">
+                                <notebook>
+                                    <page string="Employés">
+                                    </page>
+
+                                    <page string="Alloués">
+                                        <field name="allocation_employes_ids">
+                                            <form>
+                                                <sheet>
+                                                    <group>
+                                                        <field name="employe"/>
+                                                        <field name="desc"/>
+                                                        <field name="date_alloc"/>
+                                                        <field name="Hrs_planifiees"/>
+                                                        <field name="allocation"/>
+                                                        <field name="qualif"/>
+                                                    </group>
+                                                </sheet>
+                                            </form>
+                                            <tree>
+                                                <field name="employe"/>
+                                                <field name="desc"/>
+                                                <field name="date_alloc"/>
+                                                <field name="Hrs_planifiees"/>
+                                                <field name="allocation"/>
+                                                <field name="qualif"/>
+                                            </tree>
+                                        </field>
+                                    </page>
+
+                                    <page string="Ressources">
+                                        <notebook>
+                                            <page string="Détails">
+                                                <field name="allocation_ressources_ids">
+                                                    <form>
+                                                        <sheet>
+                                                            <group>
+                                                                <field name="res"/>
+                                                                <field name="des"/>
+                                                                <field name="hrs_planifiees"/>
+                                                                <field name="nb_requis"/>
+                                                                <field name="jr_deb"/>
+                                                            </group>
+                                                        </sheet>
+                                                    </form>
+                                                    <tree>
+                                                        <field name="res"/>
+                                                        <field name="des"/>
+                                                        <field name="hrs_planifiees"/>
+                                                        <field name="nb_requis"/>
+                                                        <field name="jr_deb"/>
+                                                    </tree>
+                                                </field>
+                                            </page>
+
+                                            <page string="Global">
+                                            </page>
+                                        </notebook>
+                                    </page>
+
+                                </notebook>
                             </page>
 
                             <page string="Matériel">

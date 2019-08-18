@@ -1,4 +1,8 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_commentaires_ot_emp,commentaires_ot,model_commentaires_ot,,1,1,1,1
+access_allocation_ressourcesot_emp,allocation_ressourcesot,model_allocation_ressourcesot,,1,1,1,1
+access_ressources_emp,ressources,model_ressources,,1,1,1,1
+access_allocation_employe_ot,allocation_employeot,model_allocation_employeot,,1,1,1,1
 access_permis_travail_emp,permis_travail,model_permis_travail,,1,1,1,1
 access_details_ot_emp,details_ot,model_details_ot,,1,1,1,1
 access_qualification_emp,qualification,model_qualification,,1,1,1,1
