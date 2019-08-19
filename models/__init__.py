@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from . import type_permis
 from . import commentaires_ot
 from . import permis_travail
 from . import groupes
@@ -7,7 +8,6 @@ from . import qualification
 from . import entite
 from . import employe
 from . import details_contrats
-from . import defauts
 from . import details_consignes
 from . import consignes
 from . import details_dessins
@@ -23,8 +23,9 @@ from . import intervention
 from . import eqpt_intervention
 from . import fonction
 from . import equipement
-from . import cout
 from . import topographie
+from . import cout
+from . import defauts
 from . import reparable
 from . import details_ot
 from . import allocation_employeot

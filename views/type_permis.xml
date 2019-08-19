@@ -1,0 +1,60 @@
+<odoo>
+    <data>
+
+        <!-- Form Views -->
+
+
+        <record model="ir.ui.view" id="view_gmao_type_permis">
+            <field name="name"> type_permis</field>
+            <field name="model">type_permis</field>
+            <field name="arch" type="xml">
+                <form name="type_permis form">
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="desc"/>
+                        </group>
+                        <notebook>
+                            <page string="Remarques">
+                                <field name="remarques"/>
+                            </page>
+                            <page string="Indicateurs">
+
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree views -->
+
+        <record model="ir.ui.view" id="type_permis">
+            <field name="name">type_permis_Tree</field>
+            <field name="model">type_permis</field>
+            <field name="arch" type="xml">
+                <tree string="type_permis tree">
+                    <field name="code"/>
+                    <field name="desc"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="action_gmao_type_permis">
+            <field name="name">Type Permis</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">type_permis</field>
+            <field name="view_mode">search,tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+        Create your first type_permis
+                </p>
+                <p>
+        details
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

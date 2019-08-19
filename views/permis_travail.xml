@@ -1,0 +1,88 @@
+<odoo>
+    <data>
+
+        <!-- Form Views -->
+
+
+        <record model="ir.ui.view" id="view_gmao_permis_travail">
+            <field name="name"> permis_travail</field>
+            <field name="model">permis_travail</field>
+            <field name="arch" type="xml">
+                <form name="permis_travail form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                                <field name="desc"/>
+                                <field name="date_deb"/>
+                                <field name="date_fin"/>
+                            </group>
+                            <group>
+                                <field name="n_ot"/>
+                                <field name="etat"/>
+                                <field name="type_permis"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Détails">
+                                <group>
+                                    <field name="cree"/>
+                                    <field name="n_di"/>
+                                    <field name="createur"/>
+                                    <field name="demandeur"/>
+                                    <field name="autorise_par"/>
+                                </group>
+                            </page>
+                            <page string="Employés">
+                                <group>
+                                    <group>
+                                        <field name="employe"/>
+                                        <field name="date_deb"/>
+                                        <field name="date_fin"/>
+                                        <field name="cree"/>
+                                    </group>
+                                    <group>
+                                        <field name="autorise_par"/>
+                                        <field name="date_cloture"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree views -->
+
+        <record model="ir.ui.view" id="permis_travail">
+            <field name="name">permis_travail_Tree</field>
+            <field name="model">permis_travail</field>
+            <field name="arch" type="xml">
+                <tree string="permis_travail tree">
+                    <field name="code"/>
+                    <field name="desc"/>
+                    <field name="date_deb"/>
+                    <field name="date_fin"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="action_gmao_permis_travail">
+            <field name="name">Permis Travail</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">permis_travail</field>
+            <field name="view_mode">search,tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+        Create your first permis_travail
+                </p>
+                <p>
+        details
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -25,13 +25,15 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'views/type_permis.xml',
+        'views/permis_travail.xml',
         'views/ressources.xml',
         'views/details_ot.xml',
         'views/qualification.xml',
         'views/entite.xml',
         'views/employe.xml',
         'views/details_contrats.xml',
-        'views/defauts.xml',
+        
         'views/consignes.xml',
         'views/details_consignes.xml',
         'views/manuels_dessins.xml',
@@ -51,6 +53,7 @@
         'views/equipement.xml',
         'views/fonction.xml',
         'views/topographie.xml',
+        'views/defauts.xml',
         'views/views.xml',
        
     ],

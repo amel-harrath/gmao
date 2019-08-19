@@ -56,9 +56,9 @@
               action="action_gmao_fonction"
               sequence="2"
               />
-    <menuitem name="Détails Etat Equipements" id="gmao.etat_eqpt" 
+    <menuitem name="Type Permis" id="gmao.type_permis" 
               parent="gmao.fichiers_de_bases"
-              action="action_gmao_details_eqpt"
+              action="action_gmao_type_permis"
               sequence="3"
               />
 
@@ -158,6 +158,12 @@
               parent="gmao.travaux_en_cours"
               action="action_gmao_details_ot"
               sequence="1"
+              />
+
+    <menuitem name="Permis" id="gmao.permis_travail"
+              parent="gmao.travaux_en_cours"
+              action="action_gmao_permis_travail"
+              sequence="2"
               />
     
   </data>

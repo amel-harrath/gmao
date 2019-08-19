@@ -272,7 +272,7 @@ class Topographie(models.Model):
     prefixe = fields.Selection(selection=[('bat1','BAT1'),('prod1','PROD1'),('s1','S1'),('s2','S2'),('siv','SIV'),])
     description = fields.Text(string="Description", related='equipement.desc',)
     zone = fields.Many2one('zone',string="Zone", related='equipement.zone')
-    type_permis = fields.Char(string="Type Permis",)
+    type_permis = fields.Many2one('type_permis', "Type Permis",)
     parent_geo = fields.Char(string="Parent Géograph.",related="equipement.parent_geo",)
     etat_equip = fields.Selection(string="Etat Equipement", related="equipement.etat_eqpt",)
     niveau = fields.Integer(string="Niveau", min="1",related="equipement.niv", default="1")
