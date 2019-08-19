@@ -26,7 +26,7 @@
                 <field name="n_eqpt"/>
                 <field name="pt_ot_correctif"/>
                 <field name="entite"/>
-                <field name="cat" widget="radio" options='{"horizontal": 1}'/>
+                <field name="type_eqpt" widget="radio" options='{"horizontal": 1}'/>
                 <field name="etat_equip"/>
                 <field name="eqpt_arret"/>
               </group>

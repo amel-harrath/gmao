@@ -268,22 +268,27 @@ class Topographie(models.Model):
     
 
     
-    equipement = fields.Many2one('equipement', string="Equipement", required=True)
+    equipement = fields.Char(string="Equipement", required=True)
     prefixe = fields.Selection(selection=[('bat1','BAT1'),('prod1','PROD1'),('s1','S1'),('s2','S2'),('siv','SIV'),])
-    description = fields.Text(string="Description", related='equipement.desc',)
-    zone = fields.Many2one('zone',string="Zone", related='equipement.zone')
+    description = fields.Text(string="Description",)
+    zone = fields.Many2one('zone',string="Zone")
     type_permis = fields.Many2one('type_permis', "Type Permis",)
-    parent_geo = fields.Char(string="Parent Géograph.",related="equipement.parent_geo",)
-    etat_equip = fields.Selection(string="Etat Equipement", related="equipement.etat_eqpt",)
-    niveau = fields.Integer(string="Niveau", min="1",related="equipement.niv", default="1")
-    famille = fields.Char(string="Famille",related="equipement.famille",)
-    c_charge = fields.Char(string="C Charge",related="equipement.c_charge",)
-    fonc = fields.Many2one('fonction', string="Fonction",related="equipement.fonc",)
+    parent_geo = fields.Char(string="Parent Géograph.",)
+    etat_equip = fields.Selection(string="Etat Système",
+        selection=[('0','0.Normal'),
+        ('1','1.Dégradé'),
+        ('2','2.Préparation'),
+        ('3','3.Rebus'),
+        ('4','4.Consigé'),],)    
+    niveau = fields.Integer(string="Niveau", min="1", default="1")
+    famille = fields.Char(string="Famille",)
+    c_charge = fields.Char(string="C Charge",)
+    fonc = fields.Many2one('fonction', string="Fonction",)
     pt_ot_correctif = fields.Boolean(string="PT pour OT Correctf",)
     entite = fields.Many2one('entite', string="Entité",)
     n_eqpt = fields.Integer(string="N° Equipement",)
     eqpt_arret = fields.Boolean(string="Equipement Arrêt",)
-    cat = fields.Selection(string=" ", related="equipement.type_eqpt",)
+    type_eqpt = fields.Selection(selection=[('0','0.Technique'),('1','1.Géographique'),], string="Type",)
     modele = fields.Boolean(string="Modèle?",)
     code_barres = fields.Char(string="Code Barres",)
     utilisateur = fields.Char(string="Utilisateur",)
