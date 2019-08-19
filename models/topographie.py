@@ -375,9 +375,9 @@ class Topographie(models.Model):
 
 
     gps = fields.One2many('groupes','eqpts', string="Groupes" )
-    alimente = fields.Many2many('equipement', 'alimente_eqpt', 'topo_id', 'eqpt_alimente_id', string="Alimente",)
-    alimente_par = fields.Many2many('equipement', 'alimente_par_eqpt', 'topo_id', 'eqpt_alim_par_id', string="Alimenté Par",)
-    structure_tech = fields.Many2many('equipement', 'structure_tech', 'topo_id', 'eqpt_struct_id', string="Structure Technique",)
-    equivalents = fields.Many2many('equipement', 'equivalant', 'topo_id', 'equivt_id', string="Equivalant", domain="[('fonc','=','topographie.fonc')]",)
+    alimente = fields.Many2many('topographie', 'alimente_topo', 'topo_id', 'eqpt_alimente_id', string="Alimente",)
+    alimente_par = fields.Many2many('topographie', 'alimente_topo', 'eqpt_alimente_id', 'topo_id', string="Alimenté Par",)
+    structure_tech = fields.Many2many('topographie', 'structure_tech_topo', 'topo_id', 'eqpt_struct_id', string="Structure Technique",)
+    equivalents = fields.Many2many('topographie', 'equivalant_topo', 'topo_id', 'equivt_id', string="Equivalant", domain="[('fonc','=','topographie.fonc')]",)
     compteur = fields.Many2many('compteur', 'compteur_eqpt', 'topo_id', 'cmpt_id', string="Compteur",)
     
