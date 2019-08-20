@@ -4,7 +4,7 @@ class Details_dessins(models.Model):
     _name = 'details_dessins'
 
     num = fields.Integer(string="N°",)
-    date_creation = fields.Datetime("Créé le", required=False, readonly=True, select=True
+    date_creation = fields.Datetime("Créé le", required=False, readonly=True
                                 , default=lambda self: fields.datetime.now())
     version = fields.Float(string="Version",)
     empl = fields.Char(string="Emplacement",) 

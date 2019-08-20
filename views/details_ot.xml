@@ -225,44 +225,7 @@
                             </page>
 
                             <page string="Défauts">
-                                <field name="defauts">
-                                    <form>
-                                        <sheet>
-                                            <group>
-
-                                                <field name="topo_id"/>
-                                                <field name="desc"/>
-
-
-                                            </group>
-                                            <notebook>
-                                                <page string='Détails'>
-                                                    <group>
-
-                                                        <group>
-                                                            <field name="date"/>
-                                                            <field name="type_def" widget="radio" options='{"horizontal": 1}'/>
-                                                            <field name="symptome"/>
-                                                            <field name="defaut"/>
-                                                            <field name="cause"/>
-                                                            <field name="remede"/>
-                                                        </group>
-                                                        <group>
-                                                            <field name="duree"/>
-                                                            <field name="num_ot"/>
-                                                        </group>
-                                                        <group>
-                                                            <field name="valeur_cpt"/>
-                                                            <field name="cout_ot"/>
-                                                        </group>
-
-                                                    </group>
-                                                </page>
-
-                                            </notebook>
-                                        </sheet>
-                                    </form>
-                                </field>
+                              <!--  <field name="defauts"/> -->
                             </page>
 
                             <page string="Actions">

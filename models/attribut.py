@@ -11,5 +11,5 @@ class Attribut(models.Model):
     date_version = fields.Datetime(string="Date Version",)
     n_version = fields.Integer(string="N° Version",)
 
-    eqpt_attributs_id = fields.Many2one('gmao.topographie', 'Topographie', invisible=True,)
-    gp_attributs_id = fields.Many2one('gmao.groupes', 'Groupe', invisible=True,)
+    eqpt_attributs_id = fields.Many2one('topographie', 'Topographie', invisible=True,)
+    gp_attributs_id = fields.Many2one('groupes', 'Groupe', invisible=True,)

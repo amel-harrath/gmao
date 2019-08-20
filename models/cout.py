@@ -132,10 +132,10 @@ class Cout(models.Model):
         return year_list
 
 
-    zone_cout_id = fields.Many2one('gmao.zone','Zone', invisible=True,)
-    fonction_cout_id = fields.Many2one('gmao.fonction','Fonction', invisible=True,)
-    equipement_cout_id = fields.Many2one('gmao.equipement', 'Equipement', invisible=True,)
-    gp_cout_id = fields.Many2one('gmao.groupes', 'Groupe', invisible=True,)
+    zone_cout_id = fields.Many2one('zone','Zone', invisible=True,)
+    fonction_cout_id = fields.Many2one('fonction','Fonction', invisible=True,)
+    equipement_cout_id = fields.Many2one('topographie', 'Equipement', invisible=True,)
+    gp_cout_id = fields.Many2one('groupes', 'Groupe', invisible=True,)
 
 
     periode = fields.Selection( '_get_years', string='Période', default="2019")

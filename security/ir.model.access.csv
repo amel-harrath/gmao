@@ -10,7 +10,6 @@ access_qualification_emp,qualification,model_qualification,,1,1,1,1
 access_entite_emp,entite,model_entite,,1,1,1,1
 access_employe_emp,employe,model_employe,,1,1,1,1
 access_details_contrats_emp,details_contrats,model_details_contrats,,1,1,1,1
-access_defauts_emp,defauts,model_defauts,,1,1,1,1
 access_consignes_emp,consignes,model_consignes,,1,1,1,1
 access_details_consignes_emp,details_consignes,model_details_consignes,,1,1,1,1
 access_manuels_dessins,manuels_dessins,model_manuels_dessins,,1,1,1,1

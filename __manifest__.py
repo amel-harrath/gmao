@@ -33,7 +33,6 @@
         'views/entite.xml',
         'views/employe.xml',
         'views/details_contrats.xml',
-        
         'views/consignes.xml',
         'views/details_consignes.xml',
         'views/manuels_dessins.xml',
@@ -53,7 +52,6 @@
         'views/equipement.xml',
         'views/fonction.xml',
         'views/topographie.xml',
-        'views/defauts.xml',
         'views/views.xml',
        
     ],

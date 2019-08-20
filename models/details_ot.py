@@ -90,5 +90,5 @@ class Details_OT(models.Model):
     allocation_employes_ids = fields.One2many('allocation_employeot', 'details_ot_ids', 'Allocation Employés')
     allocation_ressources_ids = fields.One2many('allocation_ressourcesot', 'details_ot_ids','Allocation Ressources')
     commentaires_ids = fields.One2many('commentaires_ot', 'details_ot_ids','Commentaires')
-    defauts = fields.One2many('defauts', 'ot_id', 'Defauts')
+    #defauts = fields.One2many('defauts', 'ot_id', 'Defauts')
     compteur_ids = fields.One2many('compteur','ot_id','Compteurs',)

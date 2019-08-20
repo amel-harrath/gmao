@@ -5,6 +5,6 @@ class Commentaires_Ot(models.Model):
 
 
     desc = fields.Text(string="",)
-    date = fields.Datetime('Date', required=False, readonly=True, select=True
+    date = fields.Datetime('Date', required=False, readonly=True
                                 , default=lambda self: fields.datetime.now())
     details_ot_ids = fields.Many2one('details_ot', 'Details OT', invisible=True,)

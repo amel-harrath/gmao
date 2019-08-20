@@ -9,4 +9,4 @@ class Reparable(models.Model):
     val_cpt_entrant = fields.Integer(string="Valeur Compteur Entrant",)
     val_cpt_sortant = fields.Integer(string="Valeur Compteur Sortant",)
 
-    eqpt_reparable_id = fields.Many2one('gmao.topographie', 'Topographie', invisible=True,)
+    eqpt_reparable_id = fields.Many2one('topographie', 'Topographie', invisible=True,)

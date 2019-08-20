@@ -25,9 +25,9 @@ from . import fonction
 from . import equipement
 from . import topographie
 from . import cout
-from . import defauts
 from . import reparable
 from . import details_ot
+#from . import defauts
 from . import allocation_employeot
 from . import ressources
 from . import allocation_ressourcesot
