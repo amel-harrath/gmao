@@ -269,7 +269,6 @@ class Topographie(models.Model):
     def _generate_eqpt_name(self):
         for res in self:
             res.equipement = dict(res.fields_get(["prefixe"],['selection'])['prefixe']["selection"]).get(res.prefixe) + "2019"
-        # selected_val = dict(self.prefixe.selection).get(self.prefixe)
 
     
     equipement = fields.Char(string="Equipement", compute="_generate_eqpt_name",)
