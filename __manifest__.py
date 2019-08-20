@@ -25,6 +25,7 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'views/famille.xml',
         'views/type_permis.xml',
         'views/permis_travail.xml',
         'views/ressources.xml',

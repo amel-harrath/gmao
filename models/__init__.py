@@ -31,6 +31,7 @@ from . import details_ot
 from . import allocation_employeot
 from . import ressources
 from . import allocation_ressourcesot
+from . import famille
 
 
 

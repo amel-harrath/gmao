@@ -45,6 +45,7 @@
                
               </page>
               <page string="Familles">
+              <field name="famille_ids"/>
                 
               </page>
               <page string="Equipements">

@@ -6,7 +6,7 @@ class Groupes(models.Model):
     code = fields.Char(string="Equipement")
     desc = fields.Text(string="Description",)
     zone = fields.Many2one('zone',string="Zone",)
-    famille = fields.Char(string="Famille")
+    famille = fields.Many2one('famille', string="Famille")
     c_charge = fields.Char(string="C Charge",)
     fonc = fields.Many2one('fonction', string="Fonction",)
     entite = fields.Many2one('entite', string="Entité")

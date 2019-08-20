@@ -32,3 +32,4 @@ class Intervention(models.Model):
 
 	equipement_ids = fields.One2many('topographie', 'intervention_id','Equipements',)
 	ressources_ids = fields.One2many('ressources','intervention_id','Ressources',)
+	famille_ids = fields.Many2many('famille','intervention_famille','intervention_id','famille_id',string='Famille',)

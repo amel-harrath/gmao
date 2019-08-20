@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+
+        <!-- Form Views -->
+
+
+        <record model="ir.ui.view" id="view_gmao_famille">
+            <field name="name"> famille</field>
+            <field name="model">famille</field>
+            <field name="arch" type="xml">
+                <form name="famille form">
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="desc"/>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree views -->
+
+        <record model="ir.ui.view" id="famille">
+            <field name="name">famille_Tree</field>
+            <field name="model">famille</field>
+            <field name="arch" type="xml">
+                <tree string="famille tree">
+                    <field name="code"/>
+                    <field name="desc"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="action_gmao_famille">
+            <field name="name">Famille</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">famille</field>
+            <field name="view_mode">search,tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+        Create your first famille
+                </p>
+                <p>
+        details
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

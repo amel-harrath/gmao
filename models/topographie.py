@@ -281,7 +281,7 @@ class Topographie(models.Model):
         ('3','3.Rebus'),
         ('4','4.Consigé'),],)    
     niveau = fields.Integer(string="Niveau", min="1", default="1")
-    famille = fields.Char(string="Famille",)
+    famille = fields.Many2one('famille', string="Famille",)
     c_charge = fields.Char(string="C Charge",)
     fonc = fields.Many2one('fonction', string="Fonction",)
     pt_ot_correctif = fields.Boolean(string="PT pour OT Correctf",)
