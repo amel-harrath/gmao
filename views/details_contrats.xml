@@ -1,8 +1,8 @@
 <odoo>
-    <data>
+  <data>
 
-<!-- Form Views -->
-    
+    <!-- Form Views -->
+
 
     <record model="ir.ui.view" id="view_gmao_details_contrats">
       <field name="name"> details_contrats</field>
@@ -18,56 +18,91 @@
                 <field name="etat"/>
                 <field name="type_ct"/>
                 <field name="entite"/>
-                <field name="valeur"/>
                 <field name="date_deb"/>
+                <field name="date_fin"/>
 
               </group>
             </group>
-              
+
+            <notebook>
+
+              <page string="Détails">
+                <notebook>
+
+                  <page string="Détails">
+                    <group>
+                      <group>
+                        <field name="valeur"/>
+                      </group>
+                      <group>
+                        <group>
+                          <field name="val_max"/>
+                          <field name="total_nb_ot"/>
+                          <field name="delai_intr_min"/>
+                          <field name="delai_intr_max"/>
+                          <field name="delai_intr_moy"/>
+                        </group>
+                        <group>
+                          <field name="val_min"/>
+                          <field name="tot_hrs_travaillees"/>
+                          <field name="tps_repar_min"/>
+                          <field name="tps_repar_max"/>
+                          <field name="tps_repar_moy"/>
+                        </group>
+                      </group>
+                    </group>
+                  </page>
+
+                  <page string="Equipements">
+                    <field name="topo_id"/>
+                  </page>
+
+                  <page string="Groupes">
+                    <field name="groupes_ids" readonly="1"/>
+                  </page>
+
+                </notebook>
+              </page>
+
+              <page string="Config.">
+              </page>
+              <page string="Remarques">
+              </page>
+              <page string="Prestations">
+              </page>
+              <page string="Factures">
+              </page>
+              <page string="Calendrier">
+              </page>
+            </notebook>
+
           </sheet>
         </form>
       </field>
     </record>
 
-<!-- Tree views -->
- 
+    <!-- Tree views -->
+
     <record model="ir.ui.view" id="details_contrats">
       <field name="name">details_contrats_Tree</field>
       <field name="model">details_contrats</field>
       <field name="arch" type="xml">
         <tree string="details_contrats tree">
-            <field name="code"/>
-            <field name="desc"/>
-            <field name="ss_traitant"/>
-            <field name="etat"/>
-            <field name="type_ct"/>
-            <field name="entite"/>
-            <field name="valeur"/>
-            <field name="date_deb"/>
+          <field name="code"/>
+          <field name="desc"/>
+          <field name="ss_traitant"/>
+          <field name="etat"/>
+          <field name="type_ct"/>
+          <field name="entite"/>
+          <field name="valeur"/>
+          <field name="date_deb"/>
         </tree>
       </field>
     </record>
 
-    <!-- Search View 
 
-    <record id="contrat_search_view" model="ir.ui.view">
-			<field name="name">contrat.search.view</field>
-			<field name="model">contrat</field>
-			<field name="arch" type="xml">
-				<search string="contrat Information">
-					<field name="type_eqpt"/>
+    <!-- Actions -->
 
-					<group expand="0" string="Group By">
-						<filter name="groupby_type_eqpt" string="Type_Equipement" domain="[]" context="{'group_by':'type_eqpt'}"/>
-					</group>
-
-					<filter name="fil_by_type_eqpt" string="Type Equipement" domain="[('type_eqpt','=','0')]"/>
-				</search>
-			</field>
-		</record>    -->
-
-<!-- Actions -->
-    
 
     <record model="ir.actions.act_window" id="action_gmao_details_contrats">
       <field name="name">Détails Contrats</field>
@@ -84,5 +119,5 @@
       </field>
     </record>
 
-    </data>
+  </data>
 </odoo>

@@ -62,6 +62,12 @@
               sequence="3"
               />
 
+    <menuitem name="Détails Contrat" id="gmao.details_contrat" 
+              parent="gmao.fichiers_de_bases"
+              action="action_gmao_details_contrats"
+              sequence="4"
+              />
+
 
       <!-- fichers des equipements -->
 

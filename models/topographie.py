@@ -371,8 +371,9 @@ class Topographie(models.Model):
     piece = fields.One2many('details_pieces',string='topo',related="pieces_outils.piece")
 
     contrat_rel = fields.One2many('contrat','equipement_id',   string='Contrats', )
-    contrats = fields.One2many('details_contrats',string="Contrats", related="contrat_rel.details_contrat", readonly=True, domain="[('type_ct', '=','0'),('type_ct','=','1')]",)
+    contrats = fields.Many2many('details_contrats',string="Contrats", related="contrat_rel.details_contrat", readonly=True, domain="[('type_ct', '=','0'),('type_ct','=','1')]",)
 
+    
 
     gps = fields.One2many('groupes','eqpts', string="Groupes" )
     alimente = fields.Many2many('topographie', 'alimente_topo', 'topo_id', 'eqpt_alimente_id', string="Alimente",)
@@ -380,7 +381,7 @@ class Topographie(models.Model):
     structure_tech = fields.Many2many('topographie', 'structure_tech_topo', 'topo_id', 'eqpt_struct_id', string="Structure Technique",)
     equivalents = fields.Many2many('topographie', 'equivalant_topo', 'topo_id', 'equivt_id', string="Equivalant", domain="[('fonc','=','topographie.fonc')]",)
     compteur = fields.Many2many('compteur', 'compteur_eqpt', 'topo_id', 'cmpt_id', string="Compteur",)
-    
+
 
     eqpts_intr_ids = fields.One2many('eqpt_intervention','topo_id',' ',)
     intervention_id = fields.Many2one('intervention', related="eqpts_intr_ids.intervention_id",)

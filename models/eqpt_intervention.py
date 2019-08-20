@@ -18,6 +18,5 @@ class Eqpt_Intervention(models.Model):
     superviseur = fields.Char()
     code_priorite = fields.Char()
     duree = fields.Integer()
-    cal_duree = fields.Selection(selection=[('0','0.Jours'),('1','1.Mois'),], string=" ",)
+    cal_duree = fields.Selection(selection=[('0','0.Jours'),('1','1.Semaines'),('2','2.Mois'),], string=" ",)
     priorite = fields.Integer(string="Priorité",)
-    

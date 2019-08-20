@@ -8,4 +8,5 @@ class Contrat(models.Model):
     equipement_id = fields.Many2one('topographie', 'Equipement', required=True,)
     desc = fields.Text(string="Description", related='equipement_id.description',)
 
-    details_contrat = fields.One2many('details_contrats','contrat_eqpts_id', 'pieces')
+    details_contrat = fields.Many2many('details_contrats','contrat_eqpts', 'contrat_eqpt_id','details_contrat_id','Détails Contrats')
+
