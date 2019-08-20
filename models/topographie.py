@@ -381,3 +381,6 @@ class Topographie(models.Model):
     equivalents = fields.Many2many('topographie', 'equivalant_topo', 'topo_id', 'equivt_id', string="Equivalant", domain="[('fonc','=','topographie.fonc')]",)
     compteur = fields.Many2many('compteur', 'compteur_eqpt', 'topo_id', 'cmpt_id', string="Compteur",)
     
+
+    eqpts_intr_ids = fields.One2many('eqpt_intervention','topo_id',' ',)
+    intervention_id = fields.Many2one('intervention', related="eqpts_intr_ids.intervention_id",)

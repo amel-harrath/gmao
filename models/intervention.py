@@ -29,5 +29,6 @@ class Intervention(models.Model):
 	code_parent = fields.Char(string='Code Parent',)
 	desc_parent = fields.Text(string='Description Parent',)
 
-	
-	
+
+	equipement_ids = fields.One2many('topographie', 'intervention_id','Equipements',)
+	ressources_ids = fields.One2many('ressources','intervention_id','Ressources',)

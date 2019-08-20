@@ -15,5 +15,3 @@ class Details_Pieces(models.Model):
 
 
     pieces_outils_id = fields.Many2one('pieces_outils', 'Pieces')
-
-

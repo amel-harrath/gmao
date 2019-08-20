@@ -6,3 +6,5 @@ class Ressources(models.Model):
     code = fields.Char(string="Ressources",)
     desc = fields.Text(string="Description",)
     
+
+    intervention_id = fields.Many2one('intervention',' Intervention', invisible=True,)

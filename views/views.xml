@@ -140,16 +140,22 @@
 
       <!-- Ressources -->
 
+    <menuitem name="Ressources" id="gmao.liste_ressources"
+              parent="gmao.ressources"
+              action="action_gmao_ressources"
+              sequence="1"
+              />
+
     <menuitem name="Employés" id="gmao.employes"
               parent="gmao.ressources"
               action="action_gmao_employe"
-              sequence="1"
+              sequence="2"
               />
 
     <menuitem name="Entité" id="gmao.entite"
               parent="gmao.ressources"
               action="action_gmao_entite"
-              sequence="2"
+              sequence="3"
               />
     
       <!-- Travaux en cours -->

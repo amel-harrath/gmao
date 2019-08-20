@@ -20,3 +20,4 @@ class Eqpt_Intervention(models.Model):
     duree = fields.Integer()
     cal_duree = fields.Selection(selection=[('0','0.Jours'),('1','1.Mois'),], string=" ",)
     priorite = fields.Integer(string="Priorité",)
+    

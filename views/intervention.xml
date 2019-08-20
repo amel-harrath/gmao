@@ -1,9 +1,9 @@
 <odoo>
   <data>
 
-  <!-- Form Views -->
+    <!-- Form Views -->
 
-   <record model="ir.ui.view" id="view_gmao_intervention">
+    <record model="ir.ui.view" id="view_gmao_intervention">
       <field name="name">Intervention</field>
       <field name="model">intervention</field>
       <field name="arch" type="xml">
@@ -23,56 +23,43 @@
               </group>
             </group>
             <notebook>
-                <page string="Détails">
-                    <group>
-                        <field name="intr_fille"/>
-                        <field name="descp_fils"/>
-                        <field name="multiplicite"/>
-                        <field name="parent_critique"/>
-                        <field name="code_parent"/>
-                        <field name="desc_parent"/>
-                    </group>
-                </page>  
-                <page string="Activités">
-                    <group>
-                        <field name="descp_fils"/>
-                    </group>
-                </page>
-                <page string="Ressources Req.">
-                    <group>
-                        <field name="descp_fils"/>
-                    </group>
-                </page>
-                <page string="Stock Req.">
-                    <group>
-                        <field name="descp_fils"/>
-                    </group>
-                </page>
-                <page string="Actions">
-                    <group>
-                        <field name="descp_fils"/>
-                    </group>
-                </page>
-                <page string="Familles">
-                    <group>
-                        <field name="descp_fils"/>
-                    </group>
-                </page>
-                <page string="Equipements">
-                    <group>
-                        <field name="descp_fils"/>
-                    </group>
-                </page>
+              <page string="Détails">
+                <group>
+                  <field name="intr_fille"/>
+                  <field name="descp_fils"/>
+                  <field name="multiplicite"/>
+                  <field name="parent_critique"/>
+                  <field name="code_parent"/>
+                  <field name="desc_parent"/>
+                </group>
+              </page>
+              <page string="Activités">
+              </page>
+              <page string="Ressources Req.">
+                <field name="ressources_ids"/>
+              </page>
+              <page string="Stock Req.">
+                
+              </page>
+              <page string="Actions">
+               
+              </page>
+              <page string="Familles">
+                
+              </page>
+              <page string="Equipements">
+                <field name="equipement_ids"/>
+              </page>
             </notebook>
           </sheet>
         </form>
-        
-        
+
+
 
       </field>
     </record>
-    
-<!-- Tree views -->
+
+    <!-- Tree views -->
 
     <record model="ir.ui.view" id="intervention_tree">
       <field name="name">Intervention</field>
@@ -90,7 +77,7 @@
       </field>
     </record>
 
-<!-- Actions -->
+    <!-- Actions -->
 
     <record model="ir.actions.act_window" id="action_gmao_intervention">
       <field name="name">Intervention</field>

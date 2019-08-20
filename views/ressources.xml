@@ -38,7 +38,7 @@
         <!-- Actions -->
 
 
-        <record model="ir.actions.act_window" id="action_gmao_group">
+        <record model="ir.actions.act_window" id="action_gmao_ressources">
             <field name="name">Ressources</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">ressources</field>
