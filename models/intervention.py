@@ -21,11 +21,13 @@ class Intervention(models.Model):
 	('1','1.Fréquence + Date'),
 	('2','2.Date'),],
 	string="Jours Ouvrés", default='0',)
-	indicateur = fields.Boolean(string='Indicateur',)
+	indicateur = fields.Char(string='Indicateur',)
 	intr_fille = fields.Char(string='Intervention Fille',)
 	descp_fils = fields.Text(string='Description Fils',)
 	multiplicite = fields.Char(string='Multiplicité',)
 	parent_critique = fields.Boolean(string='Parent Critique',)
 	code_parent = fields.Char(string='Code Parent',)
 	desc_parent = fields.Text(string='Description Parent',)
+
+	
 	

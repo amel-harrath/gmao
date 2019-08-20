@@ -1,8 +1,8 @@
 <odoo>
-    <data>
+  <data>
 
-<!-- Form Views -->
-    
+    <!-- Form Views -->
+
 
     <record model="ir.ui.view" id="view_gmao_eqpt_intervention">
       <field name="name">Equipement-Intervention</field>
@@ -11,37 +11,58 @@
         <form name="eqptIntervention form">
           <sheet>
             <group>
-              <group>
-                <field name="intervention" placeholder="Intervention"/>
-                <field name="eqpt_type"/>
-                <field name="eqpt_class"/>
-              </group>
-              <group>
-                <field name="c_charge"/>
-              </group>
+              <field name="topo_id"/>
+              <field name="desc_topo"/>
             </group>
+            <notebook>
+              <page string="Intervention">
+                <group>
+
+                  <group>
+                    <field name="intervention_id"/>
+                    <field name="desc_intr"/>
+                    <field name="type_intr"/>
+                    <field name="planification"/>
+                  </group>
+                  <group>
+                    <group>
+                      <field name="class_intr"/>
+                      <field name="c_charge"/>
+                      <field name="type_permis"/>
+                      <field name="superviseur"/>
+                    </group>
+                    <group>
+                      <field name="code_priorite"/>
+                      <field name="priorite"/>
+                      <field name="duree"/>
+                      <field name="cal_duree"/>
+                    </group>
+                  </group>
+                </group>
+              </page>
+            </notebook>
           </sheet>
         </form>
       </field>
     </record>
 
-<!-- Tree views -->
- 
+    <!-- Tree views -->
+
     <record model="ir.ui.view" id="eqpt_intervention_tree">
       <field name="name">Equipement-Intervention_tree</field>
       <field name="model">eqpt_intervention</field>
       <field name="arch" type="xml">
         <tree string="eqpt_intervention tree">
-          <field name="intervention"/>
-          <field name="eqpt_type"/>
-          <field name="eqpt_class"/>
-          <field name="c_charge"/>
+          <field name="intervention_id"/>
+          <field name="topo_id"/>
+          <field name="class_intr"/>
+          <field name="superviseur"/>
         </tree>
       </field>
     </record>
-    
-<!-- Actions -->
-    
+
+    <!-- Actions -->
+
 
     <record model="ir.actions.act_window" id="action_gmao_eqpt_intervention">
       <field name="name">Equipement-Intervention</field>
@@ -58,5 +79,5 @@
       </field>
     </record>
 
-    </data>
+  </data>
 </odoo>
