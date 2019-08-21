@@ -103,11 +103,11 @@
               action="action_gmao_manuels_dessins"
               sequence="2"
               />
-    <menuitem name="Consignes" id="gmao.consignes"
+     <menuitem name="Consignes" id="gmao.consignes"
               parent="gmao.Technique"
               action="action_gmao_consignes"
               sequence="3"
-              />
+              /> 
 
  <!--  <menuitem name="Défauts" id="gmao.defauts"
               parent="gmao.Technique"
@@ -163,6 +163,21 @@
               action="action_gmao_entite"
               sequence="3"
               />
+
+    <menuitem name="Equipe" id="gmao.equipe"
+              parent="gmao.ressources"
+              action="action_gmao_equipe"
+              sequence="4"
+              />
+
+
+      <menuitem name="Modele d'equipe" id="gmao.modele_equipe"
+              parent="gmao.ressources"
+              action="action_gmao_modeleequipe"
+              sequence="5"
+              />
+
+    
     
       <!-- Travaux en cours -->
 

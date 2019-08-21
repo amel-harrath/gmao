@@ -51,6 +51,7 @@
                             </page>
 
                             <page string="Equipes">
+                                <field name="equipe_ids"/>
                             </page>
 
                             <page string="Qualif.">

@@ -1,0 +1,57 @@
+<odoo>
+    <data>
+
+        <!-- Form Views -->
+
+        <record model="ir.ui.view" id="view_gmao_modele_equipe">
+            <field name="name">modele d'equipe</field>
+            <field name="model">modele_equipe</field>
+            <field name="arch" type="xml">
+                <form name="modele_equipe form">
+                    <sheet>
+                        <group>
+                            <field name="equipes"/>
+                            <field name="jour_semaine"/>
+                            <field name="composition"/>
+                            <field name="responsable"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree views -->
+
+        <record model="ir.ui.view" id="modele_equipe">
+            <field name="name">modele_equipe_tree</field>
+            <field name="model">modele_equipe</field>
+            <field name="arch" type="xml">
+                <tree string="modele_equipe tree">
+                    <field name="equipes"/>
+                    <field name="jour_semaine"/>
+                    <field name="composition"/>
+                    <field name="responsable"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Actions -->
+
+
+        <record model="ir.actions.act_window" id="action_gmao_modeleequipe">
+            <field name="name">modele_equipe</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">modele_equipe</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+            Create your first modele_equipe
+                </p>
+                <p>
+            details
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>
