@@ -109,11 +109,11 @@
               sequence="3"
               />
 
- <!--  <menuitem name="Défauts" id="gmao.defauts"
+   <menuitem name="Défauts" id="gmao.defauts"
               parent="gmao.Technique"
-              action="action_gmao_defauts"
+              action="action_gmao_defaut"
               sequence="4"
-              /> --> 
+              /> 
 
     <menuitem name="Financier" id="gmao.financier"
               parent="gmao.fichiers_equipement" 

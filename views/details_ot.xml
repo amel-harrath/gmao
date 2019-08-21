@@ -225,7 +225,7 @@
                             </page>
 
                             <page string="Défauts">
-                              <!--  <field name="defauts"/> -->
+                                <field name="defauts"/>
                             </page>
 
                             <page string="Actions">

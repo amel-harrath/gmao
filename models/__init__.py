@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from . import defaut
 from . import type_permis
 from . import commentaires_ot
 from . import permis_travail
@@ -27,7 +28,6 @@ from . import topographie
 from . import cout
 from . import reparable
 from . import details_ot
-#from . import defauts
 from . import allocation_employeot
 from . import ressources
 from . import allocation_ressourcesot

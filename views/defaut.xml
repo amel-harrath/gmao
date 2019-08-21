@@ -1,0 +1,84 @@
+<odoo>
+    <data>
+
+        <!-- Form Views -->
+
+
+        <record model="ir.ui.view" id="view_gmao_defaut">
+            <field name="name"> defaut</field>
+            <field name="model">defaut</field>
+            <field name="arch" type="xml">
+                <form name="defaut form">
+                    <sheet>
+                        <group>
+                        <field name="topo_id"/>
+                        <field name="desc"/>
+
+                        </group>
+                        <notebook>
+                            <page string='Détails'>
+                                <group>
+
+                                    <group>
+                                        <field name="date"/>
+                                        <field name="type_def" widget="radio" options='{"horizontal": 1}'/>
+                                        <field name="symptome"/>
+                                        <field name="defaut"/>
+                                        <field name="cause"/>
+                                        <field name="remede"/>
+                                    </group>
+                                    <group>
+                                        <field name="duree"/>
+                                    </group>
+                                    <group>
+                                        <field name="valeur_cpt"/>
+                                        <field name="cout_ot"/>
+                                    </group>
+
+                                </group>
+                            </page>
+
+                            <page string='Structure'>
+                            </page>
+
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree views -->
+
+        <record model="ir.ui.view" id="defaut">
+            <field name="name">defaut_tree</field>
+            <field name="model">defaut</field>
+            <field name="arch" type="xml">
+                <tree string="defaut tree">
+                    <field name="defaut"/>
+                    <field name="cause"/>
+                    <field name="type_def"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <!-- Actions -->
+
+
+        <record model="ir.actions.act_window" id="action_gmao_defaut">
+            <field name="name">Défauts</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">defaut</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+        Create your defaut
+                </p>
+                <p>
+        details
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>
