@@ -3,7 +3,7 @@ from odoo import models, fields
 class Defaut(models.Model):
     _name = 'defaut'
 
-    date = fields.Datetime(string='Date',)
+    date = fields.Datetime(string='Date',required=True,)
     type_def = fields.Selection(selection=[('0','Fich. Base'),('1','Famille'),], string=" ",)
     symptome = fields.Char(string='Symptôme',)
     defaut = fields.Char(string='Défaut',)

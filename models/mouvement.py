@@ -4,7 +4,7 @@ class Mouvement(models.Model):
     _name = 'mouvement'
 
     
-    type_mouvement = fields.Selection(selection=[('0','0.Tous'),('1','1.Normal'),('2','2.Géo.Technique'),('3','3.CC/Entité'),], string="Type",)
+    type_mouvement = fields.Selection(selection=[('0','0.Tous'),('1','1.Normal'),('2','2.Géo.Technique'),('3','3.CC/Entité'),], string="Type",required=True,)
     date = fields.Datetime('Date', required=False, readonly=False
                                 , default=lambda self: fields.datetime.now())
     niv = fields.Integer(string="Niveau",)

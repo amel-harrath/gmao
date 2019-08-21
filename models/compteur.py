@@ -3,7 +3,7 @@ from odoo import models, fields
 class Compteur(models.Model):
     _name = 'compteur'
 
-    compteur = fields.Char(string="Compteur",)
+    compteur = fields.Char(string="Compteur",required=True,)
     desc = fields.Text(string="Description",)
     type_compteur = fields.Char(string="Type Compteur",)
     typee = fields.Char(string="Type",)

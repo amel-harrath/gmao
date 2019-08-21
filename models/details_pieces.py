@@ -5,7 +5,7 @@ class Details_Pieces(models.Model):
 
 
 
-    article = fields.Char(string="Article",)
+    article = fields.Char(string="Article",required=True,)
     info = fields.Text(string="Info",)
     origine = fields.Integer(string="Origine",)
     groupe = fields.Char(string="Groupe",)

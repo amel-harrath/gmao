@@ -4,7 +4,7 @@ class Intervention(models.Model):
 	_name = 'intervention'
 	_description='description of intervention'
 
-	intr_code = fields.Integer(string='Intervention',)
+	intr_code = fields.Integer(string='Intervention',required=True,)
 	description = fields.Text(string='Description')
 	intr_type = fields.Char(string='Type',)
 	entite = fields.Many2one('entite', string='Entité',)

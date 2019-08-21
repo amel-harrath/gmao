@@ -3,7 +3,7 @@ from odoo import models, fields
 class Details_contrats(models.Model):
     _name = 'details_contrats'
 
-    code = fields.Char(string="Contrat",)
+    code = fields.Char(string="Contrat",required=True,)
     desc = fields.Text(string="Description",)
     ss_traitant = fields.Char(string="Sous-Traitant",)
     etat = fields.Selection(selection=[('0','0.Ouvert'),('1','1.Annuel'),], string="Etat",)

@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from . import defaut
+from . import modele_equipe
+from . import equipe
 from . import type_permis
 from . import commentaires_ot
 from . import permis_travail

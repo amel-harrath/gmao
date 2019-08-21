@@ -4,7 +4,7 @@ class Attribut(models.Model):
     _name = 'attribut'
 
 
-    intit = fields.Char(string="Intitulé",)
+    intit = fields.Char(string="Intitulé",required=True,)
     classe = fields.Integer(string="Classes",)
     desc = fields.Text(string="Description",)
     date = fields.Date(string="Date",)

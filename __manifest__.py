@@ -26,6 +26,8 @@
     'data': [
         'security/ir.model.access.csv',
         'views/defaut.xml',
+        'views/modele_equipe.xml',
+        'views/equipe.xml',
         'views/famille.xml',
         'views/type_permis.xml',
         'views/permis_travail.xml',

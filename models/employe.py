@@ -29,3 +29,5 @@ class Employe(models.Model):
     permanent = fields.Boolean(string="Permanent",)
 
     qualif_ids = fields.Many2many('qualification','qualif_empl_rel','qualif_id','empl_id', string="Qualifications",)
+
+    equipe_ids = fields.Many2many('equipe','equipe_empl_rel','empl_id','equipe_id', string="Equipes",)

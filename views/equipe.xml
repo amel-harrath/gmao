@@ -1,0 +1,75 @@
+<odoo>
+    <data>
+
+        <!-- Form Views -->
+
+
+        <record model="ir.ui.view" id="view_gmao_equipe">
+            <field name="name"> equipe</field>
+            <field name="model">equipe</field>
+            <field name="arch" type="xml">
+                <form name="equipe form">
+                    <sheet>
+                    
+                        <group>
+
+                            <group>
+                            <field name="mat"/>
+                            <field name="entite" />
+                            </group>
+
+                            <group>
+                            <field name="type_equipe"/>
+                            </group>
+
+                       </group>
+
+                        <group>
+                            <group>
+                            <field name="hr_debut" widget="float_time"/>
+                            </group>
+                            <group>
+                            <field name="hr_fin" widget="float_time"/>
+                            </group>
+                        </group>
+
+                        
+                   
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree views -->
+
+        <record model="ir.ui.view" id="equipe">
+            <field name="name">equipe_Tree</field>
+            <field name="model">equipe</field>
+            <field name="arch" type="xml">
+                <tree string="equipe tree">
+                    <field name="mat"/>
+                    <field name="type_equipe"/>
+                    <field name="hr_debut" />
+                    <field name="hr_fin" />
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="action_gmao_equipe">
+            <field name="name">Equipes</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">equipe</field>
+            <field name="view_mode">search,tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+        Create your first equipe
+                </p>
+                <p>
+        details
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

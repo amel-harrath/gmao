@@ -138,8 +138,8 @@ class Cout(models.Model):
     gp_cout_id = fields.Many2one('groupes', 'Groupe', invisible=True,)
 
 
-    periode = fields.Selection( '_get_years', string='Période', default="2019")
-    type_cout = fields.Selection(selection=[('interne','Interne'),('externe','Externe'),('total','Total'),], string=" ",)
+    periode = fields.Selection( '_get_years', string='Période', default="2019",required=True,)
+    type_cout = fields.Selection(selection=[('interne','Interne'),('externe','Externe'),('total','Total'),], string=" ",required=True,)
     ressource_planifie = fields.Float(string='Planifié',)
     ressource_correctif = fields.Float(string='Correctif',)
     ressource_divers = fields.Float(string='Divers',)

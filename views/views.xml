@@ -43,7 +43,7 @@
     <menuitem name="Intervention" id="gmao.intervention" 
               parent="gmao.fichiers_de_bases"
               action="action_gmao_intervention"
-              sequence="4"
+              sequence="6"
               />
 
     <menuitem name="Zones" id="gmao.zones" 
@@ -59,13 +59,19 @@
     <menuitem name="Type Permis" id="gmao.type_permis" 
               parent="gmao.fichiers_de_bases"
               action="action_gmao_type_permis"
-              sequence="3"
+              sequence="4"
               />
 
     <menuitem name="Détails Contrat" id="gmao.details_contrat" 
               parent="gmao.fichiers_de_bases"
               action="action_gmao_details_contrats"
-              sequence="4"
+              sequence="5"
+              />
+
+    <menuitem name="Famille" id="gmao.famille" 
+              parent="gmao.fichiers_de_bases"
+              action="action_gmao_famille"
+              sequence="3"
               />
 
 
@@ -107,9 +113,9 @@
               parent="gmao.Technique"
               action="action_gmao_consignes"
               sequence="3"
-              />
+              /> 
 
-   <menuitem name="Défauts" id="gmao.defauts"
+    <menuitem name="Défauts" id="gmao.defauts"
               parent="gmao.Technique"
               action="action_gmao_defaut"
               sequence="4"
@@ -163,6 +169,21 @@
               action="action_gmao_entite"
               sequence="3"
               />
+
+    <menuitem name="Equipe" id="gmao.equipe"
+              parent="gmao.ressources"
+              action="action_gmao_equipe"
+              sequence="4"
+              />
+
+
+    <menuitem name="Modele d'equipe" id="gmao.modele_equipe"
+              parent="gmao.ressources"
+              action="action_gmao_modeleequipe"
+              sequence="5"
+              />
+
+    
     
       <!-- Travaux en cours -->
 

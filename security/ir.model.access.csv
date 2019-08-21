@@ -1,5 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_defaut_emp,defaut,model_defaut,,1,1,1,1
+access_modele_equipe_emp,modele_equipe,model_modele_equipe,,1,1,1,1
+access_equipe_emp,equipe,model_equipe,,1,1,1,1
 access_famille,famille,model_famille,,1,1,1,1
 access_type_permis,type_permis,model_type_permis,,1,1,1,1
 access_commentaires_ot_emp,commentaires_ot,model_commentaires_ot,,1,1,1,1

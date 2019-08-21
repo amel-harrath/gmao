@@ -3,7 +3,7 @@ from odoo import models, fields
 class Permis_Travail(models.Model):
     _name = 'permis_travail'
 
-    code=fields.Char(string="Code",)
+    code=fields.Char(string="Code",required=True,)
     desc = fields.Text(string="Description",)
     date_deb = fields.Date(string="Date Début",)
     date_fin = fields.Date(string="Date Fin",)

@@ -4,10 +4,10 @@ class Eqpt_Intervention(models.Model):
     _name = 'eqpt_intervention'
 
 
-    topo_id = fields.Many2one('topographie','Equipement',)
+    topo_id = fields.Many2one('topographie','Equipement',required=True,)
     desc_topo = fields.Text(string=" ", related="topo_id.description",)
 
-    intervention_id = fields.Many2one('intervention', 'Intervention',)
+    intervention_id = fields.Many2one('intervention', 'Intervention',required=True,)
     desc_intr = fields.Text(string=" ", related="intervention_id.description",)
     type_intr = fields.Char(string="Type", related="intervention_id.intr_type",)
     planification = fields.Selection(string="Planification", related="intervention_id.planification",)

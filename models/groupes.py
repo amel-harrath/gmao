@@ -3,7 +3,7 @@ from odoo import models, fields
 class Groupes(models.Model):
     _name = 'groupes'
 
-    code = fields.Char(string="Equipement")
+    code = fields.Char(string="Equipement",required=True,)
     desc = fields.Text(string="Description",)
     zone = fields.Many2one('zone',string="Zone",)
     famille = fields.Many2one('famille', string="Famille")
