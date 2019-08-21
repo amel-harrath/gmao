@@ -265,11 +265,14 @@ class Topographie(models.Model):
             pays_list.append((i, i))
         return pays_list
 
-    
+    @api.multi
+    def _generate_eqpt_name(self):
+        for res in self:
+            res.equipement = dict(res.fields_get(["prefixe"],['selection'])['prefixe']["selection"]).get(res.prefixe) + "2019"
 
     
-    equipement = fields.Char(string="Equipement", required=True)
-    prefixe = fields.Selection(selection=[('bat1','BAT1'),('prod1','PROD1'),('s1','S1'),('s2','S2'),('siv','SIV'),])
+    equipement = fields.Char(string="Equipement", compute="_generate_eqpt_name",)
+    prefixe = fields.Selection(selection=[('bat1','BAT1'),('prod1','PROD1'),('s1','S1'),('s2','S2'),('siv','SIV'),],required=True, string="Préfixe",)
     description = fields.Text(string="Description",)
     zone = fields.Many2one('zone',string="Zone")
     type_permis = fields.Many2one('type_permis', "Type Permis",)
